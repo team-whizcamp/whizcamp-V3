@@ -198,43 +198,11 @@ body {
   }
 
   /* --------------------------------------------------------------------------
-     7. AI MODERNIZATION -> Centered to 1280px Grid
+     7. AI MODERNIZATION — the elements now live inside .ai-modernization-section
+        which uses its own flex layout (see end of home.css). The old absolute
+        centering rules must NOT be applied to them; they are neutralised here.
      -------------------------------------------------------------------------- */
-  .homepage .AI-modernization {
-    left: calc(50% - 640px) !important;
-  }
-
-  .homepage .don-t-rebuild-grow {
-    left: calc(50% - 640px) !important;
-  }
-
-  .homepage .text-wrapper-34 {
-    left: calc(50% - 640px) !important;
-  }
-
-  .homepage .frame-17 {
-    left: calc(50% - 640px) !important;
-  }
-
-  .homepage .group-69 {
-    left: calc(50% - 640px) !important;
-  }
-
-  .homepage .group-52 {
-    left: calc(50% - 640px + 738px) !important;
-  }
-
-  .homepage .group-59 {
-    left: calc(50% - 640px + 738px) !important;
-  }
-
-  .homepage .group-63 {
-    left: calc(50% - 640px + 738px) !important;
-  }
-
-  .homepage .group-67 {
-    left: calc(50% - 640px + 738px) !important;
-  }
+  /* No rules needed — positioning is handled by the scoped flex layout. */
 
   /* --------------------------------------------------------------------------
      8. WHAT WE ADD (.group-72) -> 100% Full-Width & Centered Pills

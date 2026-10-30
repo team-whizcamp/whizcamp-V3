@@ -187,7 +187,7 @@ body {
   color: transparent;
   font-size: 20px;
   letter-spacing: 0;
-  line-height: normal;
+  line-height: 28px;
 }
 
 .homepage .text-wrapper-4 {
@@ -220,7 +220,7 @@ body {
   color: transparent;
   font-size: 80px;
   letter-spacing: 0;
-  line-height: 80px;
+  line-height: 84px;
 }
 
 .homepage .text-wrapper-7 {
@@ -232,7 +232,8 @@ body {
 
 .homepage .text-wrapper-8 {
   color: #ffffff;
-  line-height: 0.1px;
+  font-weight: 400;
+  line-height: 84px;
 }
 
 .homepage .text-wrapper-9 {
@@ -2306,7 +2307,7 @@ body {
 
 .homepage .frame-32 {
   padding: 214px 0px 941px 1px;
-      left: calc(37.9% - 721px);
+      left: calc(34% - 721px);
   background-color: #191919;
   display: inline-flex;
   align-items: flex-start;
@@ -4183,12 +4184,13 @@ body {
 }
 
 .homepage .group-151 {
-  width: 697px;
-  height: 73px;
+  /* width: 697px; */
+  height: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+      justify-content: center;
 }
 
 .homepage .inspired-to-advance {
@@ -6351,4 +6353,289 @@ body {
   border: 2px solid;
   border-color: #ffffff;
   transform: rotate(-8.79deg);
+}
+
+/* ==========================================================================
+   AI MODERNIZATION — Sticky Left Layout
+   The section is position:absolute at the exact page y-position where the
+   original Figma-exported elements were (top:3558px).  All child overrides
+   are scoped to the new BEM wrappers so nothing outside is touched.
+   ========================================================================== */
+
+/* Allow vertical overflow so the JS translate3d is never clipped */
+.homepage {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* 1. Section: place at the correct page location */
+.ai-modernization-section {
+  position: absolute;
+  top: 3558px;
+  left: 0;
+  width: 100%;
+  min-height: 1160px;
+  padding-bottom: 80px;
+  overflow: visible;
+}
+
+/* 2. Two-column flex row — 1280px centred grid (same as every other section) */
+.ai-modernization__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 80px;
+  width: 1280px;
+  margin-left: calc(50% - 640px);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Left sticky column (~538px wide to match original content) */
+.ai-modernization__left {
+  flex: 0 0 538px;
+  max-width: 538px;
+  position: relative;
+}
+
+.ai-modernization__sticky-inner {
+  position: relative;          /* JS sets transform:translate3d on this */
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 4. Right scrolling cards column */
+.ai-modernization__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* -----------------------------------------------------------------------
+   5. Left column children — reset absolute positions so they stack in flex
+   ----------------------------------------------------------------------- */
+.ai-modernization__left .AI-modernization,
+.ai-modernization__left .don-t-rebuild-grow,
+.ai-modernization__left .text-wrapper-34,
+.ai-modernization__left .frame-17,
+.ai-modernization__left .group-69 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+
+/* Feature tag list */
+.ai-modernization__left .frame-17 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+}
+
+/* Each feature row (icon + label) */
+.ai-modernization__left .group-47,
+.ai-modernization__left .group-48,
+.ai-modernization__left .group-49,
+.ai-modernization__left .group-50,
+.ai-modernization__left .group-51 {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+/* Icon */
+.ai-modernization__left .frame-18 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  flex-shrink: 0;
+}
+
+/* Text labels */
+.ai-modernization__left .LLM-chatbots,
+.ai-modernization__left .text-wrapper-35,
+.ai-modernization__left .text-wrapper-36,
+.ai-modernization__left .voice-NLP-interfaces {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* CTA button container */
+.ai-modernization__left .group-69 {
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+  width: auto !important;
+  margin-top: 8px;
+}
+
+.ai-modernization__left .group-70 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  height: 54px;
+  width: 241px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ai-modernization__left .rectangle-13 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ai-modernization__left .text-wrapper-12 {
+  position: relative !important;
+  z-index: 1;
+}
+
+.ai-modernization__left .group-71 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------------------------------
+   6. Right column cards — reset absolute positions, let them stack in flex
+   ----------------------------------------------------------------------- */
+.ai-modernization__right .group-52,
+.ai-modernization__right .group-59,
+.ai-modernization__right .group-63,
+.ai-modernization__right .group-67 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  min-height: 252px;
+  height: auto !important;
+}
+
+/* Card backgrounds */
+.ai-modernization__right .rectangle-11,
+.ai-modernization__right .rectangle-12 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Card inner content */
+.ai-modernization__right .group-53 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  padding: 30px 24px !important;
+  box-sizing: border-box !important;
+}
+
+/* Card header row */
+.ai-modernization__right .group-54 {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.ai-modernization__right .text-wrapper-37,
+.ai-modernization__right .group-55 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+/* Card body */
+.ai-modernization__right .group-56,
+.ai-modernization__right .group-60,
+.ai-modernization__right .group-64 {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Subtitle / paragraph negative-margin resets */
+.ai-modernization__right .text-wrapper-39,
+.ai-modernization__right .text-wrapper-40,
+.ai-modernization__right .text-wrapper-41,
+.ai-modernization__right .text-wrapper-44,
+.ai-modernization__right .group-57,
+.ai-modernization__right .group-61,
+.ai-modernization__right .group-65,
+.ai-modernization__right .group-68 {
+  margin-left: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* -----------------------------------------------------------------------
+   7. Responsive — single column on tablet/mobile (< 1024px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .ai-modernization-section {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  .ai-modernization__container {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+
+  .ai-modernization__left {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ai-modernization__right {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  /* Disable JS sticky translate on mobile */
+  .ai-modernization__sticky-inner {
+    transform: none !important;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   8. Wide screens (>= 1440px) — already handled by responsive.css centering
+      but ensure section width stays full and centring works
+   ----------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .ai-modernization-section {
+    left: 0;
+    width: 100%;
+  }
+
+  .ai-modernization__container {
+    width: 1280px;
+    margin-left: calc(50% - 640px);
+  }
 }
