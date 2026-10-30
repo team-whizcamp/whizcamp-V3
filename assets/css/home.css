@@ -73,7 +73,7 @@ body {
   width: 1440px;
   height: 830px;
   display: flex;
-  background-image: url(https://c.animaapp.com/1ddEign_4nArNimmZWOWqQ/img/rectangle-25017.png);
+  background-image: url(../images/rectangle-25017.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -330,7 +330,7 @@ body {
 .homepage .orbit-badge__center {
   position: absolute;
   inset: 0;
-  background-image: url(https://c.animaapp.com/1ddEign_4nArNimmZWOWqQ/img/group-1410088632.png);
+  background-image: url(../images/group-1410088632.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -368,7 +368,7 @@ body {
   width: 1440px;
   height: 216px;
   display: flex;
-  background-image: url(https://c.animaapp.com/1ddEign_4nArNimmZWOWqQ/img/rectangle-25026.svg);
+  background-image: url(../icons/rectangle-25026.svg);
   background-size: 100% 100%;
 }
 
@@ -1900,7 +1900,7 @@ body {
   width: 1440px;
   height: 264px;
   display: flex;
-  background-image: url(https://c.animaapp.com/1ddEign_4nArNimmZWOWqQ/img/frame-1984078277.svg);
+  background-image: url(../icons/frame-1984078277.svg);
   background-size: 100% 100%;
 }
 
@@ -2306,7 +2306,7 @@ body {
 
 .homepage .frame-32 {
   padding: 214px 0px 941px 1px;
-  left: calc(50% - 720px);
+      left: calc(37.9% - 721px);
   background-color: #191919;
   display: inline-flex;
   align-items: flex-start;
@@ -3198,7 +3198,7 @@ body {
 
 .homepage .group-113 {
   width: 304px;
-  height: 202px;
+  height: 224px;
   display: flex;
   background-color: #f6f6f6;
   border-radius: 15px;
@@ -3239,7 +3239,7 @@ body {
 
 .homepage .group-115 {
   width: 304px;
-  height: 202px;
+  height: 224px;
   display: flex;
   background-color: #2525250a;
   border-radius: 15px;

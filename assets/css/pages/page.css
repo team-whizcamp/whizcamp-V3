@@ -1,0 +1,191 @@
+/**
+ * Whizcamp Inner Pages Stylesheet
+ * Standardized layout, header, footer, and content styles for secondary pages.
+ */
+
+:root {
+  --color-primary: #00baf5;
+  --color-secondary: #ffbb00;
+  --color-dark: #0c0c0c;
+  --color-dark-surface: #191919;
+  --color-text-main: #252525;
+  --color-text-muted: #646464;
+  --color-light-bg: #f6f6f6;
+  --max-content-width: 1280px;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text-main);
+  background-color: var(--color-light-bg);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+.site-header {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 1.25rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.site-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.site-nav a {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--color-primary);
+}
+
+.btn-consultation {
+  background: linear-gradient(90deg, #00baf5 0%, #0082c8 100%);
+  color: #ffffff;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-consultation:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* Page Hero */
+.page-hero {
+  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, var(--color-dark) 70%);
+  color: #ffffff;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+}
+
+.page-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-badge {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.page-subtitle {
+  color: #9ca3af;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Main Content Area */
+.page-content {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.content-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-bottom {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+}
