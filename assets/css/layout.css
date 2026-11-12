@@ -18,7 +18,7 @@ html body .responsive-stage,
 .homepage.homepage .announcement-ticker__viewport .announcement-ticker__track{white-space:nowrap;width:max-content}
 
 /* ---------- hero (bg is in flow; loose items hang off the gutter) ---------- */
-.homepage.homepage .group{position:relative!important;top:auto!important;height:998px!important}
+.homepage.homepage .group{position:relative!important;top:auto!important;height:947px!important}
 .homepage.homepage .AI-powered-digital,
 .homepage.homepage .text-wrapper-6,
 .homepage.homepage .technology-solutions{left:var(--gutter)!important;right:var(--gutter);width:auto;max-width:640px}
@@ -2193,4 +2193,204 @@ html body .homepage .cs-more .cs-more__circle{
 @media (prefers-reduced-motion:reduce){
   html body .homepage .cs-more .cs-more__label::before,
   html body .homepage .cs-more .cs-more__circle{transition:none}
+}
+/* =====================================================================
+   INDUSTRIES — sticky right column: text + image + button (v2)
+   ===================================================================== */
+html body .homepage.homepage .industry-layout > .industry-side{
+  grid-column:2;
+  grid-row:1;
+  position:sticky;
+  top:max(24px, calc(50vh - 340px));
+  align-self:start;
+  justify-self:end;
+  width:100%;
+  max-width:520px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+/* text on top: cancel the old absolute / grid positioning */
+html body .homepage.homepage .industry-side > .from-healthcare-to{
+  position:static !important;
+  top:auto !important; left:auto !important; right:auto !important; bottom:auto !important;
+  transform:none !important;
+  display:block !important;
+  grid-column:auto !important;
+  width:100% !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  text-align:left;
+}
+
+/* image: the column is sticky now, the image just fills its box */
+html body .homepage.homepage .industry-side > .industry-media{
+  position:relative !important;
+  top:auto !important;
+  grid-column:auto !important;
+  width:100% !important;
+  max-width:none !important;
+  height:min(520px, calc(100vh - 260px)) !important;
+  margin:0 !important;
+  border-radius:12px;
+  overflow:hidden;
+  background:#e9e9e9;
+  isolation:isolate;
+  flex:none;
+}
+
+/* button: bottom-right, under the image (relative so its inner pieces anchor to it) */
+html body .homepage.homepage .industry-side > .group-132{
+  position:relative !important;
+  top:auto !important; 
+   
+    right: 54%;
+  grid-column:auto !important;
+  width:234px !important;
+  height:54px !important;
+  margin:0 0 0 auto !important;
+  flex:none;
+}
+
+/* tablet / mobile: not sticky, image is shown inline under each row */
+@media(max-width:900px){
+  html body .homepage.homepage .industry-layout > .industry-side{
+    position:relative;
+    top:auto;
+    grid-column:1;
+    grid-row:auto;
+    max-width:none;
+    justify-self:stretch;
+    margin-top:32px;
+  }
+  html body .homepage.homepage .industry-side > .industry-media{display:none !important}
+  html body .homepage.homepage .industry-side > .group-132{margin:0 auto 0 0 !important}
+}
+
+/* =====================================================================
+   INDUSTRIES — end-of-list spacing + vertically centred right column
+   ===================================================================== */
+
+/* image height variable, used to centre the whole column (text + image + button) */
+html body .homepage.homepage .industry-layout{
+  --img-h:min(480px, calc(100vh - 340px));
+  margin-bottom:80px !important;            /* space between the section and the next one */
+}
+
+/* extra room under the last row, so the right side stays pinned and centred
+   while the last items scroll through the middle of the screen */
+html body .homepage.homepage .industry-layout > .industry-list{
+  padding-bottom:clamp(260px, 32vh, 380px) !important;
+}
+
+/* right column: centred in the viewport (approx. height = image + text + button + gaps) */
+html body .homepage.homepage .industry-layout > .industry-side{
+  top:max(24px, calc(50vh - (var(--img-h) + 152px) / 2)) !important;
+}
+html body .homepage.homepage .industry-side > .industry-media{
+  height:var(--img-h) !important;
+}
+
+/* tablet / mobile: no extra padding needed (image is inline, nothing is sticky) */
+@media(max-width:900px){
+  html body .homepage.homepage .industry-layout > .industry-list{padding-bottom:0 !important}
+  html body .homepage.homepage .industry-layout{margin-bottom:40px !important}
+}
+/* =====================================================================
+   INDUSTRIES — remove the extra gap, keep equal spacing
+   ===================================================================== */
+html body .homepage.homepage .industry-layout > .industry-list{
+  padding-bottom:0 !important;          /* removes the big empty block */
+}
+html body .homepage.homepage .industry-layout{
+  margin-bottom:100px !important;       /* same as the 100px space above "[INDUSTRIES WE SERVE]" */
+}
+
+/* =====================================================================
+   AI MODERNIZATION (left column) — match the reference design
+   ===================================================================== */
+
+/* heading: light weight, only the highlighted words are bold italic cyan */
+html body .homepage .ai-modernization__left .don-t-rebuild-grow .text-wrapper-32{
+  font-weight:400 !important;
+  color:#252525 !important;
+}
+html body .homepage .ai-modernization__left .don-t-rebuild-grow .text-wrapper-33{
+  font-weight:700 !important;
+  font-style:italic !important;
+  color:#00baf5 !important;
+}
+
+/* checklist: gold tick BEFORE the label, no yellow box */
+html body .homepage .ai-modernization__left .group-47,
+html body .homepage .ai-modernization__left .group-48,
+html body .homepage .ai-modernization__left .group-49,
+html body .homepage .ai-modernization__left .group-50,
+html body .homepage .ai-modernization__left .group-51{
+  flex-direction:row !important;          /* was row-reverse (put the tick after the text) */
+  justify-content:flex-start !important;
+  align-items:center !important;
+  gap:10px !important;
+  height:24px !important;
+}
+html body .homepage .ai-modernization__left .ai-check{
+  flex:none;
+  width:auto !important;
+  height:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+  background:none !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  color:#f2b100 !important;
+  font-size:26px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+}
+
+/* CTA: cyan -> green gradient pill, medium-weight label */
+html body .homepage .ai-modernization__left .group-70 .rectangle-13{
+  background:linear-gradient(135deg,#17a6d1 0%,#86b85a 100%) !important;
+}
+html body .homepage .ai-modernization__left .group-70 .text-wrapper-12{
+  font-weight:500 !important;
+  color:#fff !important;
+}
+/* FEATURED PROJECTS: "2021 - 26" pinned to the right gutter on every screen */
+html body .homepage.homepage .cs-scale{position:relative;width:100%}
+html body .homepage.homepage .cs-scale > .group-36{
+  position:relative !important;
+  left:0 !important;
+  width:100% !important;
+}
+html body .homepage.homepage .group-36 > .text-wrapper-27{
+  position:absolute !important;
+  left:auto !important;
+  right:var(--cs-year-right, var(--gutter)) !important;
+  margin:0 !important;
+  text-align:right;
+  white-space:nowrap;
+}
+@media(max-width:900px){
+  html body .homepage.homepage .group-36 > .text-wrapper-27{
+    position:static !important;
+    display:block;
+    margin:0 0 12px var(--gutter) !important;
+    text-align:left;
+  }
+}
+/* FEATURED PROJECTS: left text uses the same gap as the year on the right */
+html body .homepage.homepage .group-36 > .group-37{
+  left:0 !important;
+  margin-left:var(--cs-year-right, var(--gutter)) !important;
+}
+
+/* tablet / mobile: same gutter on the left */
+@media(max-width:900px){
+  html body .homepage.homepage .group-36 > .group-37{
+    margin-left:var(--gutter) !important;
+  }
 }

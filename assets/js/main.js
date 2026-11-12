@@ -505,7 +505,12 @@
       var f = fit();
       pin.style.height = (PIN_H * f) + 'px';
       row.style.marginTop = (-10 - 230 * f) + 'px';
-      gsap.set(scaleEl, { scale: f, transformOrigin: '50% 0' });
+           gsap.set(scaleEl, { scale: f, transformOrigin: '50% 0' });
+
+      /* keep "2021 - 26" exactly one gutter from the right edge after scaling */
+      var gut = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gutter')) || 120;
+      var W = scaleEl.offsetWidth;
+      scaleEl.style.setProperty('--cs-year-right', ((gut - W * (1 - f) / 2) / f) + 'px');
     }
 
     function setPin(mode) {
@@ -1436,4 +1441,38 @@
     { threshold: THRESHOLD }
   );
   io.observe(footer);
+})();
+
+(function () {
+  function build() {
+    var layout = document.querySelector('.industry-layout');
+    var media  = layout && layout.querySelector('.industry-media');
+    var text   = document.querySelector('.from-healthcare-to');
+    var btn    = document.querySelector('.group-132');
+    if (!layout || !media || !text || !btn) return false;
+    if (layout.querySelector('.industry-side')) return true;
+
+    var side = document.createElement('div');
+    side.className = 'industry-side';
+    layout.appendChild(side);          // grid column 2
+    side.appendChild(text);            // text on top
+    side.appendChild(media);           // image (your existing script keeps working)
+    side.appendChild(btn);             // button under the image
+    return true;
+  }
+
+  function init() {
+    if (build()) return;
+    // industries-scroll.js creates .industry-layout, so wait for it
+    var tries = 0;
+    var t = setInterval(function () {
+      if (build() || ++tries > 40) clearInterval(t);
+    }, 100);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
