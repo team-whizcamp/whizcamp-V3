@@ -2394,3 +2394,39 @@ html body .homepage.homepage .group-36 > .group-37{
     margin-left:var(--gutter) !important;
   }
 }
+/* =====================================================================
+   TRUSTED BRANDS — logos cut na hon (container + slides ki fixed height hatao)
+   ===================================================================== */
+html body .homepage.homepage .trusted-brands-section,
+html body .homepage.homepage .trusted-brands-section .group-6{
+  height:auto !important;
+  min-height:0 !important;
+}
+
+html body .homepage.homepage .brands-slider-wrap{
+  height:auto !important;
+  max-height:none !important;
+  overflow:hidden;              /* sirf left-right marquee clip ho */
+  padding:12px 0;               /* upar-neeche thodi jagah, taaki shadow/corners na katein */
+}
+
+html body .homepage.homepage .brands-slider{
+  height:auto !important;
+  align-items:center;
+}
+
+html body .homepage.homepage .brands-slider .brand-slide{
+  height:auto !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+/* logo poora dikhe: height auto, width wahi rahegi jo abhi hai */
+html body .homepage.homepage .brands-slider .brand-slide img{
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain;
+  display:block;
+}

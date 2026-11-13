@@ -1,0 +1,472 @@
+/* =========================================================
+   Whizcamp – mega menus + sticky header
+   Everything inside the panel is sized in `em`, and the panel's
+   font-size is a % of the header width (container query units), so the
+   menu scales together with your responsive stage.
+   1em = 16px when the header is 1280px wide.
+   ========================================================= */
+
+/* ---------- sticky header (original) ---------- */
+.group-25 {
+  z-index: 1000;                       /* above overlay + page content */
+  will-change: translate;
+}
+.group-25.is-stuck-fixed { position: fixed !important; margin: 0 !important; }
+
+.group-26 { isolation: isolate; }
+.mm-stickybg {                          /* dark glass shown only while stuck */
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  border-radius: var(--mm-header-radius, 20px);
+  background: rgba(21, 28, 40, .88);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  opacity: 0; transition: opacity .25s ease;
+}
+.group-25.is-stuck .mm-stickybg { opacity: 1; }
+
+/* ---------- nav triggers ---------- */
+[data-mm-trigger] { cursor: pointer; }
+[data-mm-trigger] img { transition: transform .2s ease; }
+[data-mm-trigger].is-open img { transform: rotate(180deg); }
+[data-mm-trigger]:focus-visible { outline: 2px solid #00aeef; outline-offset: 6px; border-radius: 6px; }
+
+/* ---------- dim overlay ---------- */
+.mm-overlay {
+  position: absolute; left: 0; width: 100%; bottom: 0; z-index: 900;
+  background: rgba(8, 10, 16, .38);
+  opacity: 0; pointer-events: none; transition: opacity .25s ease;
+}
+.mm-overlay.is-on { opacity: 1; pointer-events: auto; }
+
+/* ---------- root / stage ---------- */
+.mm-root, .mm-root *, .mm-root *::before, .mm-root *::after { box-sizing: border-box; }
+.mm-root {
+  position: absolute; left: 0; right: 0; top: 124%;
+  container-type: inline-size;
+  z-index: 5;
+  pointer-events: none;
+}
+.mm-stage {
+  display: grid; padding-top: .85cqw;      /* gap between header and panel */
+  font-size: clamp(10px, calc(var(--mm-scale, 1.02) * 1cqw), 15px);   /* ~13px @ 1280px header. Lower --mm-scale for smaller text */
+  font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #222;
+}
+.mm-panel {
+  grid-area: 1 / 1;
+  height: 34em;
+  min-height: 0;
+  display: grid;
+  background: #f6f6f6;
+  border-radius: 1.25em;
+  overflow: hidden;
+  box-shadow: 0 1.5em 3.5em rgba(0, 0, 0, .28);
+  visibility: hidden; opacity: 0; transform: translateY(-.6em);
+  transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
+}
+.mm-panel.is-active {
+  visibility: visible; opacity: 1; transform: none; pointer-events: auto;
+  transition: opacity .22s ease, transform .22s ease, visibility 0s;
+}
+:where(.mm-panel) a { color: inherit; text-decoration: none; }
+:where(.mm-panel) :where(h3, h4, p, ul) { margin: 0; padding: 0; }
+:where(.mm-panel) :where(ul) { list-style: none; }
+.mm-ico { width: 1.15em; height: 1.15em; flex: none; }
+
+.mm-label {
+  font-size: 1.08em; font-weight: 500; text-transform: uppercase;
+  letter-spacing: .005em; color: #4a4a4a; line-height: 1.3;
+}
+.mm-label--bar { position: relative; padding-left: .55em; font-size: 1.25em; font-weight: 600; color: #1b1b1b; }
+.mm-label--bar::before {
+  content: ""; position: absolute; left: 0; top: .12em; bottom: .12em; width: .17em; background: #f5a800; border-radius: 1px;
+}
+
+/* ---------- main area (services / work) ---------- */
+.mm-panel--services, .mm-panel--work { grid-template-columns: 1fr 31%; }
+.mm-main { display: flex; flex-direction: column; padding: 1.7em 1.4em 1.9em 1.5em; min-width: 0; }
+.mm-main > .mm-label { margin-bottom: 1.35em; }
+.mm-cols { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.mm-col { display: flex; flex-direction: column; min-width: 0; padding-right: 1.5em; }
+.mm-col--divided { padding-right: 0; padding-left: 1.5em; border-left: 1px solid #dcdcdc; }
+.mm-panel--services .mm-main { padding-right: 3em; }
+
+/* services list */
+.mm-colhead {
+  position: relative; padding-left: .5em; margin: .2em 0 1.2em;
+  font-size: 1.25em; font-weight: 600; line-height: 1.3; color: #161616;
+}
+.mm-colhead::before { content: ""; position: absolute; left: 0; top: .1em; bottom: .1em; width: .17em; background: #f5a800; }
+.mm-list li { height: 3.4em; }
+.mm-list li:first-child { margin-bottom: .85em; }
+.mm-list a {
+  display: flex; align-items: center; justify-content: space-between; height: 100%;
+  padding: 0 1.2em; border-radius: .55em; font-size: 1.08em; color: #555;
+  transition: background .18s, color .18s;
+}
+.mm-list a .mm-ico { opacity: 0; transform: translateX(-.4em); transition: opacity .18s, transform .18s; }
+.mm-list a.is-active, .mm-list a:hover, .mm-list a:focus-visible { background: #e8eefb; color: #00aeef; outline: none; }
+.mm-list a.is-active .mm-ico, .mm-list a:hover .mm-ico, .mm-list a:focus-visible .mm-ico { opacity: 1; transform: none; }
+.mm-list:hover a.is-active:not(:hover) { background: transparent; color: #555; }
+.mm-list:hover a.is-active:not(:hover) .mm-ico { opacity: 0; }
+
+/* services CTA card */
+.mm-cta {
+  position: relative; margin-top: auto; display: flex; align-items: stretch; justify-content: space-between;
+  height: 8.75em; padding: 1.25em 1.25em 1.2em 1.25em; border-radius: .6em; color: #fff;
+  background: linear-gradient(120deg, #02b9f2 0%, #4cb5a4 52%, #96b056 100%);
+  overflow: hidden; transition: filter .2s;
+}
+.mm-cta:hover { filter: brightness(1.05); }
+.mm-cta__text { display: flex; flex-direction: column; justify-content: space-between; max-width: 74%; }
+.mm-cta strong { font-size: 1.1em; font-weight: 600; line-height: 1.25; }
+.mm-cta span { font-size: .93em; line-height: 1.25; margin-top: .3em; }
+.mm-cta em { margin-top: auto; font-style: normal; font-size: 1.1em; font-weight: 600; display: inline-flex; align-items: center; gap: .35em; }
+.mm-cta__art { position: absolute; right: .7em; bottom: .75em; width: 5.3em; height: auto; }
+
+/* work items */
+.mm-work { display: flex; align-items: center; gap: 1em; margin-bottom: 1.5em; border-radius: .5em; }
+.mm-work img { width: 7.3em; height: 7.3em; flex: none; display: block; object-fit: cover; }
+.mm-work h4 { font-size: 1.25em; font-weight: 500; color: #202020; line-height: 1.3; margin-bottom: .2em; }
+.mm-work p { font-size: .93em; line-height: 1.38; color: #6b6b6b; }
+.mm-work:hover h4 { color: #00aeef; }
+.mm-work:focus-visible { outline: 2px solid #00aeef; outline-offset: 3px; }
+.mm-panel--work .mm-main > .mm-label { margin-bottom: 1.75em; }
+.mm-panel--work .mm-col { padding-bottom: 0; }
+
+/* featured column */
+.mm-feature { display: flex; flex-direction: column; padding: 1.7em 1.4em 1.9em 1.5em; min-width: 0; }
+.mm-feature--cream { background: #f7f0dd; }
+.mm-feature--blue  { background: #e3f2f7; }
+.mm-feature .mm-label { margin-bottom: 1.2em; }
+.mm-feature__img { width: 100%; height: 18.3em; object-fit: cover; border-radius: .6em; display: block; background: rgba(0,0,0,.06); }
+.mm-feature h4 { margin-top: 1.25em; font-size: 1.1em; font-weight: 600; line-height: 1.32; color: #1b1b1b; }
+.mm-feature p { margin-top: .6em; font-size: .93em; line-height: 1.3; color: #666; }
+.mm-feature__link { margin-top: auto; padding-top: .6em; display: inline-flex; align-items: center; gap: .4em; font-size: 1.1em; font-weight: 600; color: #00aeef !important; align-self: flex-start; }
+.mm-feature__link:hover { text-decoration: underline; text-underline-offset: .2em; }
+
+/* ---------- products ---------- */
+.mm-panel--products { grid-template-columns: 22% 1fr 31%; }
+.mm-intro {
+  position: relative; overflow: hidden; color: #fff; padding: 1.9em 1.4em 0 1.5em;
+  background: linear-gradient(165deg, #22255d 0%, #282e82 42%, #2f45c4 100%);
+}
+.mm-intro .mm-label--bar { color: #fff; }
+.mm-intro h3 { margin-top: 1.05em; font-size: 1.92em; font-weight: 600; line-height: 1.04; letter-spacing: -.01em; }
+.mm-intro p { margin-top: 1.1em; font-size: .93em; line-height: 1.38; color: #eef1ff; }
+.mm-intro__art {
+  position: absolute; left: 0; bottom: 0; width: 100%; height: auto; display: block;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%); mask-image: linear-gradient(to bottom, transparent 0, #000 22%);
+}
+.mm-panel--products .mm-main { padding: 1.9em 1.5em 1.9em 1.5em; }
+.mm-prodhead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.3em; }
+.mm-badge { margin-right: 1.2em; padding: .35em .9em; border-radius: 999px; background: #e3f4e5; color: #2e9e4b; font-size: .86em; font-weight: 500; white-space: nowrap; }
+.mm-product {
+  display: flex; align-items: center; gap: .75em; padding: .33em 1.25em .33em .33em; margin-bottom: 1.1em;
+  border: 1px solid #dcdcdc; background: #f7f7f7; transition: border-color .18s, box-shadow .18s, background .18s;
+}
+.mm-product:hover, .mm-product:focus-visible { border-color: #00aeef; background: #fff; outline: none; box-shadow: 0 .4em 1.2em rgba(0, 174, 239, .15); }
+.mm-product img { width: 6.55em; height: 6.55em; flex: none; display: block; object-fit: cover; }
+.mm-product__text { flex: 1; min-width: 0; }
+.mm-product h4 { display: flex; align-items: center; gap: .5em; font-size: 1.25em; font-weight: 500; line-height: 1.3; color: #1d1d1d; }
+.mm-pill { padding: .15em .65em; border-radius: 999px; background: #e3f4e5; color: #2e9e4b; font-size: .66em; font-weight: 500; }
+.mm-product strong { display: block; margin-top: .05em; font-size: 1.1em; font-weight: 500; color: #e9a800; line-height: 1.3; }
+.mm-product p { margin-top: .3em; font-size: .93em; line-height: 1.36; color: #6b6b6b; }
+.mm-product__go { display: inline-flex; align-items: center; gap: .4em; font-size: 1.1em; font-weight: 500; color: #00aeef; white-space: nowrap; }
+.mm-prodfoot {
+  margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .8em;
+  font-size: .93em; color: #6b6b6b; white-space: nowrap;
+}
+.mm-prodfoot i { width: .4em; height: .4em; border-radius: 50%; background: #bdbdbd; flex: none; }
+
+/* ---------- small screens: mega menu is desktop only ---------- */
+@media (max-width: 1023px) {
+  .mm-root, .mm-overlay { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mm-panel, .mm-overlay, .mm-stickybg, [data-mm-trigger] img { transition: none !important; }
+}
+
+/* =========================================================
+   STICKY: ticker + full-width white bar + header
+   (sirf scroll karne ke baad; top par pehle jaisa hi rahega)
+   ========================================================= */
+:root {
+  --wc-ticker-h: 46px;   /* JS se auto set */
+  --wc-bar-h: 70px;      /* JS se auto set */
+  --wc-header-top: 46px; /* JS se auto set */
+}
+
+/* ticker hamesha upar fixed */
+.announcement-ticker.wc-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1003;
+}
+
+/* full width white bar: bg + blue stroke */
+.wc-stickbar {
+  position: fixed;
+  top: var(--wc-ticker-h);
+  left: 0;
+  width: 100%;
+  height: var(--wc-bar-h);
+  background: #ffffff;
+  border-bottom: 1px solid #b9d4f5;                 /* blue stroke */
+  box-shadow: 0 4px 12px rgba(31, 79, 156, .10);    /* halki shadow (hatani ho to none kar do) */
+  z-index: 1002;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+body.wc-is-stuck .wc-stickbar { opacity: 1; transform: none; }
+
+/* header bar ke upar, transparent, full width */
+.group-25.wc-stuck {
+  position: fixed !important;
+  top: var(--wc-header-top, var(--wc-ticker-h)) !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+  translate: none !important;
+  z-index: 1003 !important;
+  background: transparent !important;
+}
+
+/* pill transparent, bina border/shadow, taaki bar ke saath mil jaye */
+.group-25.wc-stuck .mm-stickybg { display: none !important; }
+.group-25.wc-stuck::before,
+.group-25.wc-stuck::after,
+.group-25.wc-stuck .group-26,
+.group-25.wc-stuck .group-26::before,
+.group-25.wc-stuck .group-26::after {
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* ===== BLUR FIX: stuck state me header ke andar kisi bhi element se
+   shadow / blur / filter band (dropdown arrows ka color filter aur mega menu rehne do) ===== */
+.group-25.wc-stuck *:not(.frame-11):not(.frame-12):not(.frame-13):not(.mm-root):not(.mm-root *),
+.group-25.wc-stuck *::before,
+.group-25.wc-stuck *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* ===== Stuck state: nav links ko dark karo (white bar par dikhein) ===== */
+.group-25.wc-stuck .frame-10 {
+  position: relative;
+  z-index: 5;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.group-25.wc-stuck .frame-10,
+.group-25.wc-stuck .frame-10 *,
+.group-25.wc-stuck .text-wrapper-25,
+.group-25.wc-stuck .text-wrapper-26 {
+  color: #1b2a4a !important;
+  -webkit-text-fill-color: #1b2a4a !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+
+/* separator dots */
+.group-25.wc-stuck .frame-10 .ellipse {
+  background: #9db9e3 !important;
+}
+
+/* dropdown arrows (Services / Work / Products) dark */
+.group-25.wc-stuck .frame-11,
+.group-25.wc-stuck .frame-12,
+.group-25.wc-stuck .frame-13 {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(30%) saturate(1500%) hue-rotate(190deg) !important;
+}
+
+/* hover par blue */
+.group-25.wc-stuck .text-wrapper-25:hover,
+.group-25.wc-stuck .text-wrapper-26:hover {
+  color: #00aeef !important;
+  -webkit-text-fill-color: #00aeef !important;
+}
+
+/* ===== Sticky header: responsive tweaks ===== */
+.wc-stickbar {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* tablet */
+@media (max-width: 1023px) {
+  .wc-stickbar { box-shadow: 0 3px 10px rgba(31, 79, 156, .10); }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .wc-stickbar { box-shadow: 0 2px 8px rgba(31, 79, 156, .10); }
+  .announcement-ticker.wc-fixed { z-index: 1004; }
+}
+
+/* notch wale phones */
+@supports (padding: env(safe-area-inset-left)) {
+  .wc-stickbar,
+  .announcement-ticker.wc-fixed {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* animation kam karne wale users ke liye */
+@media (prefers-reduced-motion: reduce) {
+  .wc-stickbar { transition: none !important; }
+}
+
+/* ---------- products (positions + spacing matched to reference) ----------
+   FONT SIZE BILKUL PEHLE JAISA HAI (original em values, koi badlav nahi).
+   Sirf positions, spacing, image sizes reference image se match kiye hain.
+
+   --rp = reference image ka 1px (reference panel = 1110 x 485).
+   Isliye har gap/size panel ki width ke saath same proportion me scale hota hai.
+   ------------------------------------------------------------------------- */
+.mm-panel--products {
+  --rp: min(.09009cqw, 1.25px);                          /* 100cqw / 1110 */
+
+  height: calc(485 * var(--rp));
+  grid-template-columns: calc(240 * var(--rp)) 1fr calc(348 * var(--rp));
+  background: #f5f5f5;
+}
+
+/* ===== LEFT: intro (dark blue) ===== */
+.mm-intro {
+  position: relative; overflow: hidden; color: #fff;
+  padding: calc(32 * var(--rp)) calc(17 * var(--rp)) 0 calc(17 * var(--rp));
+  background: linear-gradient(165deg, #22255d 0%, #282e82 42%, #2f45c4 100%);
+}
+.mm-intro .mm-label--bar {
+  color: #f2efe0;
+  line-height: calc(22 * var(--rp));
+}
+.mm-intro h3 {
+  margin-top: calc(30 * var(--rp));
+  font-size: 1.92em; font-weight: 600;
+  line-height: calc(28 * var(--rp));
+  letter-spacing: -.01em; white-space: nowrap;
+}
+.mm-intro p {
+  margin-top: calc(13 * var(--rp));
+  font-size: .93em; line-height: calc(17.5 * var(--rp)); color: #e6e9ff;
+}
+.mm-intro__art {
+  position: absolute; left: 0; bottom: calc(0 * var(--rp));
+  width: 100%;
+  object-fit: contain; object-position: center bottom;
+  display: block;
+}
+
+/* ===== MIDDLE: in-house products ===== */
+.mm-panel--products .mm-main {
+  padding: calc(32 * var(--rp)) calc(21 * var(--rp)) calc(30 * var(--rp)) calc(21 * var(--rp));
+}
+
+.mm-prodhead {
+  display: flex; align-items: center; justify-content: space-between;
+  height: calc(22 * var(--rp));
+  margin-bottom: calc(21 * var(--rp));
+}
+.mm-prodhead .mm-label--bar { line-height: calc(22 * var(--rp)); }
+.mm-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: calc(136 * var(--rp)); height: calc(22 * var(--rp));
+  margin-right: calc(18 * var(--rp)); padding: 0 calc(10 * var(--rp));
+  border-radius: 999px; background: #e3f4e5; color: #2e9e4b;
+  font-size: .86em; font-weight: 500; white-space: nowrap;
+}
+
+.mm-product {
+  box-sizing: border-box;
+  display: flex; align-items: center;
+  gap: calc(11 * var(--rp));
+  height: calc(102 * var(--rp));
+  padding: 0 calc(17 * var(--rp)) 0 calc(5 * var(--rp));
+  margin-bottom: calc(14 * var(--rp));
+  border: 1px solid #dcdcdc; background: #f7f7f7;
+  transition: border-color .18s, box-shadow .18s, background .18s;
+}
+.mm-product:hover, .mm-product:focus-visible {
+  border-color: #00aeef; background: #fff; outline: none;
+  box-shadow: 0 .4em 1.2em rgba(0, 174, 239, .15);
+}
+.mm-product img {
+  width: calc(91 * var(--rp)); height: calc(91 * var(--rp));
+  flex: none; display: block; object-fit: cover;
+}
+.mm-product__text { flex: 1; min-width: 0; }
+.mm-product h4 {
+  display: flex; align-items: center; gap: .5em;
+  font-size: 1.25em; font-weight: 500; line-height: 1.3; color: #1d1d1d;
+}
+.mm-pill {
+  padding: .15em .65em; border-radius: 999px;
+  background: #e3f4e5; color: #2e9e4b;
+  font-size: .66em; font-weight: 500;
+}
+.mm-product strong {
+  display: block; margin-top: .05em;
+  font-size: 1.1em; font-weight: 500; line-height: 1.3; color: #e9a800;
+}
+.mm-product p {
+  margin-top: calc(5 * var(--rp));
+  font-size: .93em; line-height: calc(16 * var(--rp)); color: #6b6b6b;
+}
+.mm-product__go {
+  display: inline-flex; align-items: center; gap: .4em;
+  font-size: 1.1em; font-weight: 500; color: #00aeef; white-space: nowrap;
+}
+
+.mm-prodfoot {
+  margin-top: auto; display: flex; align-items: center; justify-content: space-between;
+  font-size: .93em; color: #6b6b6b; white-space: nowrap;
+}
+.mm-prodfoot i { width: calc(5 * var(--rp)); height: calc(5 * var(--rp)); border-radius: 50%; background: #bdbdbd; flex: none; }
+
+/* ===== RIGHT: Whizcamp Ventures (light blue) ===== */
+.mm-panel--products .mm-feature {
+  padding: calc(31 * var(--rp)) calc(37 * var(--rp)) calc(30 * var(--rp)) calc(21 * var(--rp));
+  background: #e3f2f7;
+}
+.mm-panel--products .mm-feature .mm-label {
+  line-height: calc(20 * var(--rp));
+  margin-bottom: calc(13 * var(--rp));
+}
+.mm-panel--products .mm-feature__img {
+  width: 100%; height: calc(255 * var(--rp));
+  object-fit: cover; border-radius: calc(14 * var(--rp));
+}
+.mm-panel--products .mm-feature h4 {
+  margin-top: calc(20 * var(--rp));
+  font-size: 1.1em; font-weight: 600;
+  line-height: calc(19.5 * var(--rp)); color: #1b1b1b;
+}
+.mm-panel--products .mm-feature p {
+  margin-top: calc(7 * var(--rp));
+  font-size: .93em; line-height: calc(16 * var(--rp)); color: #666;
+}
+.mm-panel--products .mm-feature__link {
+  margin-top: auto; padding-top: 0;
+  line-height: calc(20 * var(--rp));
+  font-size: 1.1em; font-weight: 500;
+}
