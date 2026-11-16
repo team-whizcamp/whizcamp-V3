@@ -2430,3 +2430,16 @@ html body .homepage.homepage .brands-slider .brand-slide img{
   object-fit:contain;
   display:block;
 }
+/* Stacked industry images: fade between them */
+.industry-feature-image {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  object-fit: cover;
+  pointer-events: none;
+}
+.industry-feature-image.is-active {
+  opacity: 1;
+}
+.industry-list__item {
+  cursor: pointer;
+}

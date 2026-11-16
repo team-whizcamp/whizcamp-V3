@@ -643,20 +643,20 @@
     if (!list || !hero || list.closest('.industry-layout') || list.dataset.wcReady) return;
     list.dataset.wcReady = '1';
 
-    var IMAGES = [
-      null,
-      'assets/images/rectangle-25050.webp',
-      'assets/images/rectangle-25040.webp',
-      'assets/images/rectangle-25028-2.webp',
-      'assets/images/rectangle-25028.webp',
-      'assets/images/rectangle-25017.webp',
-      'assets/images/rectangle-25028-2.webp',
-      'assets/images/rectangle-25050.webp',
-      'assets/images/rectangle-25054.png',
-      'assets/images/rectangle-25028.webp',
-      'assets/images/rectangle-25028-1.webp',
-      'assets/images/rectangle-25017.webp'
-    ];
+  var IMAGES = [
+  'assets/images/HealthcareWellness.jpg',      // 01
+  'assets/images/TravelHospitality.jpg',       // 02
+  'assets/images/LogisticsTransportation.jpg', // 03
+  'assets/images/RetailECommerce.jpg',         // 04
+  'assets/images/FoodDeliverySolutions.jpg',   // 05
+  'assets/images/SportsFitness.jpg',           // 06
+  'assets/images/EducationELearning.jpg',      // 07
+  'assets/images/RealEstate.jpg',              // 08
+  'assets/images/ElectricVehicle.jpg',         // 09
+  'assets/images/Finance.jpg',                 // 10
+  'assets/images/Games.jpg',                   // 11
+  'assets/images/SAAS.jpg'                     // 12
+];
 
     var DESKTOP = '(min-width: 901px)';
     var DUR = 0.55;
