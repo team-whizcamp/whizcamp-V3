@@ -1,98 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us | Whizcamp LLC</title>
-    <link rel="stylesheet" href="../assets/css/globals.css" />
-    <link rel="stylesheet" href="../assets/css/pages/page.css" />
-  </head>
-  <body>
-    <!-- Site Header -->
-    <header class="site-header">
-      <div class="header-container">
-        <a href="../index.html" class="site-logo">
-          <img src="../assets/icons/vector-16.svg" alt="Whizcamp Logo" />
-          <span>WHIZCAMP</span>
-        </a>
-        <nav class="site-nav">
-          <a href="../index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="about.html" class="active">About</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a href="contact.html" class="btn-consultation">
-          Book Consultation
-        </a>
-      </div>
-    </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="page-hero-container">
-        <span class="page-badge">[WHO WE ARE]</span>
-        <h1 class="page-title">Driving Real Impact Through Applied Innovation</h1>
-        <p class="page-subtitle">
-          A Texas-based AI and engineering company fusing machine intelligence, cloud architecture,
-          and world-class design so your business leads the industry.
-        </p>
-      </div>
-    </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Whizcamp | Austin TX Software Development Partner</title>
+  <meta name="description"
+    content="Whizcamp is an Austin, TX software development partner building AI-powered digital platforms for startups, small businesses, and enterprises." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="../assets/images/rectangle-25017.webp" fetchpriority="high" />
+  <!-- shared site styles (same order as index.html) -->
+  <link rel="stylesheet" href="../assets/css/globals.css" />
+  <link rel="stylesheet" href="../assets/css/home.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/mega-menu.css" />
+  <!-- about page only -->
+  <link rel="stylesheet" href="../assets/css/pages/aboutpage.css" />
+</head>
 
-    <!-- Main Content -->
-    <main class="page-content">
-      <div class="content-card">
-        <h2>Our Mission</h2>
-        <p>Building smarter technology for a stronger business future. We turn complex technical challenges into intuitive, high-velocity digital products that create sustainable competitive advantage.</p>
-      </div>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ab-ne" viewBox="0 0 24 24">
+      <path d="M5 19 19 5M10 5h9v9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="ab-right" viewBox="0 0 24 24">
+      <path d="M4 12h15m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="ic-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="ic-plan" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="18" rx="2" />
+      <path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4" />
+    </symbol>
+    <symbol id="ic-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.3-4.3" />
+    </symbol>
+    <symbol id="ic-network" viewBox="0 0 24 24">
+      <rect x="9" y="2" width="6" height="6" rx="1" />
+      <rect x="2" y="16" width="6" height="6" rx="1" />
+      <rect x="16" y="16" width="6" height="6" rx="1" />
+      <path d="M12 8v4M5 16v-2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2" />
+    </symbol>
+    <symbol id="ic-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="6" />
+      <path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5" />
+    </symbol>
+    <symbol id="ic-mega" viewBox="0 0 24 24">
+      <path d="m3 11 18-5v12L3 14v-3z" />
+      <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+    </symbol>
+    <symbol id="ic-hire" viewBox="0 0 24 24">
+      <circle cx="10" cy="8" r="4" />
+      <path d="M2 21a8 8 0 0 1 10.4-7.6" />
+      <circle cx="18" cy="18" r="3" />
+      <path d="m22 22-1.9-1.9" />
+    </symbol>
+    <symbol id="ic-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3" />
+      <path
+        d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+    </symbol>
+    <symbol id="ic-owner" viewBox="0 0 24 24">
+      <circle cx="9" cy="7" r="4" />
+      <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 11l2 2 4-4" />
+    </symbol>
+    <symbol id="ic-heart" viewBox="0 0 24 24">
+      <path
+        d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+    </symbol>
+    <symbol id="ic-trophy" viewBox="0 0 24 24">
+      <path
+        d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1.2 1.2C7.8 18.7 7 20.2 7 22M14 14.7V17c0 .6.5 1 1.2 1.2 1 .5 1.8 2 1.8 3.8M18 2H6v7a6 6 0 0 0 12 0V2z" />
+    </symbol>
+    <symbol id="ic-dice" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="3" />
+      <circle cx="8.5" cy="8.5" r="1" />
+      <circle cx="15.5" cy="8.5" r="1" />
+      <circle cx="12" cy="12" r="1" />
+      <circle cx="8.5" cy="15.5" r="1" />
+      <circle cx="15.5" cy="15.5" r="1" />
+    </symbol>
+    <symbol id="ic-spark" viewBox="0 0 24 24">
+      <path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" />
+      <path d="M19 3v4M17 5h4M5 17v4M3 19h4" />
+    </symbol>
+    <symbol id="ic-growth" viewBox="0 0 24 24">
+      <path d="m3 17 6-6 4 4 8-8" />
+      <path d="M15 7h6v6" />
+    </symbol>
+  </svg>
+  <div class="responsive-stage">
+    <div class="homepage about-page">
 
-      <div class="content-card">
-        <h2>Our Vision</h2>
-        <p>A future where innovation drives real, measurable business success. We believe in building technology that integrates with your existing workflows without requiring costly full rebuilds.</p>
-      </div>
-
-      <div class="content-card">
-        <h2>Why Whizcamp</h2>
-        <ul>
-          <li><strong>No Full Rebuild Required:</strong> We modernize legacy platforms incrementally.</li>
-          <li><strong>Delivered in 6–12 Weeks:</strong> Agile delivery cadence with tangible milestones.</li>
-          <li><strong>Enterprise-Ready:</strong> Battle-tested security, cloud resilience, and strict compliance.</li>
-        </ul>
-      </div>
-    </main>
-
-    <!-- Site Footer -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div>
-          <h3>WHIZCAMP</h3>
-          <p>We empower businesses to scale digitally through innovation, strategy, and smart development.</p>
+      <!-- ===== shared: announcement ticker + header / mega menu (identical to home) ===== -->
+      <div class="announcement-ticker">
+        <div class="announcement-ticker__viewport">
+          <div class="announcement-ticker__track">
+            <p class="free-AI-readiness">
+              <span class="text-wrapper">Free AI Readiness Assessment</span>
+              <span class="span">
+                - Find Out If Your Business Is AI-Ready in 30 Min -
+              </span>
+              <span class="text-wrapper-2">Start Free</span>
+            </p>
+            <img class="vector" src="../assets/icons/vector-1.svg" />
+            <p class="p">
+              <span class="span">Enjoy </span>
+              <span class="text-wrapper-3">1 Week FREE Trial</span>
+              <span class="span"> &amp; 45 Days Post-Launch Support - </span>
+              <span class="text-wrapper-2">Claim Now</span>
+            </p>
+            <img class="vector" src="../assets/icons/vector-1.svg" />
+            <p class="p">
+              <span class="text-wrapper-3">Limited Slots</span>
+              <span class="span">
+                : Only 3 New Client Projects This Month -
+              </span>
+              <span class="text-wrapper-2">Book Your Call</span>
+            </p>
+          </div>
         </div>
-        <div>
-          <h4>Services</h4>
-          <p><a href="services.html">AI &amp; ML Development</a></p>
-          <p><a href="services.html">Web Development</a></p>
-          <p><a href="services.html">Cloud &amp; DevOps</a></p>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="blog.html">Blog</a></p>
-          <p><a href="contact.html">Contact</a></p>
-        </div>
-        <div>
-          <h4>Location</h4>
-          <p>1980, 701 Tillery Street Unit 12, Austin, TX, Travis, US, 78702</p>
-          <p>info@whizcamp.tech</p>
-        </div>
       </div>
-      <div class="footer-bottom">
-        <span>Copyright &copy; 2026 Whizcamp LLC. All rights reserved.</span>
-        <span>Privacy Policy &bull; Terms &amp; Conditions</span>
-      </div>
-    </footer>
+      <div class="group-25">
+        <div class="group-26">
+          <img class="group-27" src="../assets/images/group-1596.png" />
+          <div class="group-28">
+            <div class="group-29">
+              <div class="rectangle-6"></div>
+              <div class="text-wrapper-10">Book Consultation</div>
+            </div>
+            <img class="group-30" src="../assets/images/group-1410088626-3.png" />
+          </div>
+          <div class="frame-10">
+            <div class="text-wrapper-25">About</div>
+            <div class="ellipse"></div>
+            <div class="group-31">
+              <div class="text-wrapper-26">Services</div>
+              <img class="frame-11" src="../assets/icons/frame-31.svg" />
+            </div>
+            <div class="ellipse"></div>
+            <div class="group-32">
+              <div class="text-wrapper-26">Work</div>
+              <img class="frame-12" src="../assets/icons/frame-31.svg" />
+            </div>
+            <div class="ellipse"></div>
+            <div class="text-wrapper-25">Industries</div>
+            <div class="ellipse"></div>
+            <div class="group-33">
+              <div class="text-wrapper-26">Products</div>
+              <img class="frame-13" src="../assets/icons/frame-31.svg" />
+            </div>
+            <div class="ellipse"></div>
+            <div class="text-wrapper-25">Insights</div>
+          </div>
 
-    <script src="../assets/js/main.js"></script>
-  </body>
+          <!-- ============================================================
+               MEGA MENUS (Services / Work / Products)
+               ============================================================ -->
+          <div class="mm-root" data-mm-root>
+            <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+              <symbol id="mm-arrow-right" viewBox="0 0 24 24">
+                <path d="M4 12h15m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </symbol>
+              <symbol id="mm-arrow-ne" viewBox="0 0 24 24">
+                <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </symbol>
+            </svg>
+
+            <div class="mm-stage">
+
+              <!-- ===================== SERVICES ===================== -->
+              <div class="mm-panel mm-panel--services" id="mm-services" data-mm-panel="services" role="region"
+                aria-label="Services">
+                <div class="mm-main">
+                  <div class="mm-label">Our Services</div>
+                  <div class="mm-cols">
+                    <div class="mm-col">
+                      <h3 class="mm-colhead">Build &amp; Scale</h3>
+                      <ul class="mm-list">
+                        <li><a href="#" class="is-active">AI &amp; Machine Learning<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                        <li><a href="#">App Development Services<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                        <li><a href="#">Website Development<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                        <li><a href="#">IT Staff Augmentation<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                      </ul>
+                      <a href="#" class="mm-cta">
+                        <div class="mm-cta__text">
+                          <strong>Have a Complex Business Challenge?</strong>
+                          <span>Let's build scalable solutions that drive measurable business growth.</span>
+                          <em>Schedule a Consultation <svg class="mm-ico">
+                              <use href="#mm-arrow-ne" />
+                            </svg></em>
+                        </div>
+                        <svg class="mm-cta__art" viewBox="0 0 120 96" aria-hidden="true">
+                          <rect x="6" y="26" width="84" height="58" rx="7" fill="#fff" />
+                          <path d="M6 33a7 7 0 0 1 7-7h70a7 7 0 0 1 7 7v4H6z" fill="#1f4f9c" />
+                          <circle cx="15" cy="31.5" r="1.8" fill="#fff" />
+                          <circle cx="21" cy="31.5" r="1.8" fill="#fff" />
+                          <circle cx="27" cy="31.5" r="1.8" fill="#fff" />
+                          <rect x="14" y="44" width="22" height="16" rx="3" fill="#cfe0f7" />
+                          <rect x="42" y="45" width="40" height="4" rx="2" fill="#9db9e3" />
+                          <rect x="42" y="54" width="30" height="4" rx="2" fill="#cfe0f7" />
+                          <rect x="14" y="66" width="68" height="4" rx="2" fill="#cfe0f7" />
+                          <circle cx="82" cy="66" r="13" fill="#fff" fill-opacity=".55" stroke="#1f4f9c"
+                            stroke-width="5" />
+                          <path d="m92 76 14 13" stroke="#1f4f9c" stroke-width="7" stroke-linecap="round" />
+                          <circle cx="86" cy="20" r="11" fill="#f5b800" />
+                          <text x="86" y="25" text-anchor="middle" font-size="15" font-weight="700" fill="#1b2a4a"
+                            font-family="DM Sans, sans-serif">?</text>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="mm-col mm-col--divided">
+                      <h3 class="mm-colhead">Protect &amp; Grow</h3>
+                      <ul class="mm-list">
+                        <li><a href="#" class="is-active">Cyber Security<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                        <li><a href="#">Digital Marketing<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                        <li><a href="#">DevOps &amp; Clouds<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                        <li><a href="#">DTC &amp; CRO Services<svg class="mm-ico">
+                              <use href="#mm-arrow-right" />
+                            </svg></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <aside class="mm-feature mm-feature--cream">
+                  <div class="mm-label">Featured Insight</div>
+                  <img class="mm-feature__img" src="../assets/images/mm-featured-cybersecurity.jpg" alt=""
+                    loading="lazy" decoding="async">
+                  <h4>Cybersecurity as a Strategic Imperative for Modern Enterprises</h4>
+                  <p>Modern enterprises operate within complex digital ecosystems, making secure infrastructure…</p>
+                  <a href="#" class="mm-feature__link">Read Article <svg class="mm-ico">
+                      <use href="#mm-arrow-ne" />
+                    </svg></a>
+                </aside>
+              </div>
+
+              <!-- ===================== WORK ===================== -->
+              <div class="mm-panel mm-panel--work" id="mm-work" data-mm-panel="work" role="region" aria-label="Work">
+                <div class="mm-main">
+                  <div class="mm-label">Our Work</div>
+                  <div class="mm-cols">
+                    <div class="mm-col">
+                      <a href="#" class="mm-work">
+                        <img src="../assets/images/mm-work-mumshandmade.png" alt="MumsHandMade" loading="lazy"
+                          decoding="async">
+                        <div>
+                          <h4>MumsHandMade</h4>
+                          <p>Whizcamp partnered with Mumshandmade to optimize its eCommerce experience.</p>
+                        </div>
+                      </a>
+                      <a href="#" class="mm-work">
+                        <img src="../assets/images/mm-work-kingpool.png" alt="KingPool" loading="lazy" decoding="async">
+                        <div>
+                          <h4>KingPool</h4>
+                          <p>Kingpool is a smart sports platform connecting fans through competition and engagement.</p>
+                        </div>
+                      </a>
+                      <a href="#" class="mm-work">
+                        <img src="../assets/images/mm-work-kaireai.png" alt="KaireAI" loading="lazy" decoding="async">
+                        <div>
+                          <h4>KaireAI</h4>
+                          <p>From daily checkups to emergency alerts, Kaire keeps seniors safe and families connected.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="mm-col mm-col--divided">
+                      <a href="#" class="mm-work">
+                        <img src="../assets/images/mm-work-epiceats.png" alt="EpicEats" loading="lazy" decoding="async">
+                        <div>
+                          <h4>EpicEats</h4>
+                          <p>Epic Eats is a modern food ordering and delivery app built around a love for great food and
+                            everyday convenience.</p>
+                        </div>
+                      </a>
+                      <a href="#" class="mm-work">
+                        <img src="../assets/images/mm-work-mastercook.png" alt="Mastercook" loading="lazy"
+                          decoding="async">
+                        <div>
+                          <h4>Mastercook</h4>
+                          <p>MasterCook has been a trusted name in recipe management for over two decades.</p>
+                        </div>
+                      </a>
+                      <a href="#" class="mm-work">
+                        <img src="../assets/images/mm-work-giu.png" alt="GIU" loading="lazy" decoding="async">
+                        <div>
+                          <h4>GIU</h4>
+                          <p>GIU simplifies sports management, scheduling, and team coordination.</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <aside class="mm-feature mm-feature--blue">
+                  <div class="mm-label">Featured Insight</div>
+                  <img class="mm-feature__img" src="../assets/images/mm-featured-webapp.jpg" alt="" loading="lazy"
+                    decoding="async">
+                  <h4>Why Strategic Web Application Development Matters</h4>
+                  <p>In today’s digital economy, enterprise success depends on scalable technology, seamless…</p>
+                  <a href="#" class="mm-feature__link">Read Article <svg class="mm-ico">
+                      <use href="#mm-arrow-ne" />
+                    </svg></a>
+                </aside>
+              </div>
+
+              <!-- ===================== PRODUCTS ===================== -->
+              <div class="mm-panel mm-panel--products" id="mm-products" data-mm-panel="products" role="region"
+                aria-label="Products">
+                <div class="mm-intro">
+                  <div class="mm-label mm-label--bar">Our Products</div>
+                  <h3>Innovative Products Built by Whizcamp</h3>
+                  <p>Real-world solutions designed, built, and scaled in-house to solve meaningful problems.</p>
+                  <img class="mm-intro__art" src="../assets/images/mm-products-illustration.png" alt="" loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="mm-main">
+                  <div class="mm-prodhead">
+                    <div class="mm-label mm-label--bar">In-House Products</div>
+                    <span class="mm-badge">• Live &amp; Open for Beta</span>
+                  </div>
+                  <a href="#" class="mm-product">
+                    <img src="../assets/images/mm-product-technbuddy.png" alt="techNbuddy" loading="lazy"
+                      decoding="async">
+                    <div class="mm-product__text">
+                      <h4>techNbuddy <span class="mm-pill">• Live</span></h4>
+                      <strong>Connect with Confidence</strong>
+                      <p>AI-powered communication assistant that helps you connect smarter.</p>
+                    </div>
+                    <span class="mm-product__go">Explore <svg class="mm-ico">
+                        <use href="#mm-arrow-ne" />
+                      </svg></span>
+                  </a>
+                  <a href="#" class="mm-product">
+                    <img src="../assets/images/mm-product-kitchenpocket.png" alt="KitchenPocket" loading="lazy"
+                      decoding="async">
+                    <div class="mm-product__text">
+                      <h4>KitchenPocket <span class="mm-pill">• Live</span></h4>
+                      <strong>Your Recipe. Your Data. Your Earning.</strong>
+                      <p>Smart recipe management and earning insights all in your pocket.</p>
+                    </div>
+                    <span class="mm-product__go">Explore <svg class="mm-ico">
+                        <use href="#mm-arrow-ne" />
+                      </svg></span>
+                  </a>
+                  <div class="mm-prodfoot"><span>Powered by Whizcamp LLC</span><i></i><span>Austin,
+                      TX</span><i></i><span>Now Accepting Beta Users</span></div>
+                </div>
+                <aside class="mm-feature mm-feature--blue">
+                  <div class="mm-label">Whizcamp Ventures</div>
+                  <img class="mm-feature__img" src="../assets/images/mm-featured-ventures.jpg" alt="" loading="lazy"
+                    decoding="async">
+                  <h4>Engineering Products. Driving Innovation. Creating Business Impact.</h4>
+                  <p>Beyond client engagements, Whizcamp invests in building and scaling proprietary technology
+                    solutions.</p>
+                  <a href="#" class="mm-feature__link">Explore Our Ventures <svg class="mm-ico">
+                      <use href="#mm-arrow-ne" />
+                    </svg></a>
+                </aside>
+              </div>
+
+            </div>
+          </div>
+          <!-- ================= /MEGA MENUS ================= -->
+
+        </div>
+      </div>
+
+      <!-- ================= HERO ================= -->
+      <section class="ab-hero" aria-labelledby="ab-title">
+        <div class="layout-container-lg ab-hero__inner">
+          <h1 class="ab-hero__title" id="ab-title">
+            <span class="ab-hero__line ab-hero__line--lead"><span>About Whizcamp</span></span>
+            <span class="ab-hero__line ab-hero__line--sub"><span>Your Austin TX <b>Software</b></span></span>
+            <span class="ab-hero__line ab-hero__line--sub"><span><b>Development Partner</b></span></span>
+          </h1>
+        </div>
+      </section>
+
+      <div class="after-case-studies">
+
+        <!-- ================= WHO WE ARE ================= -->
+        <section class="ab-section ab-section--light ab-pad" id="who-we-are">
+          <div class="layout-container-lg">
+            <div class="ab-who">
+              <div class="ab-eyebrow">[WHO WE ARE]</div>
+              <img class="ab-who__img" src="../assets/images/rectangle-25023.webp"
+                alt="Whizcamp engineers reviewing a cloud dashboard" width="321" height="474" data-reveal>
+              <div class="ab-who__copy">
+                <div>
+                  <p class="ab-who__text"><strong>At Whizcamp, we build digital platforms that move ideas from design to
+                      deployment — with speed, precision, and intelligence.</strong></p>
+                  <p class="ab-who__text">Our AI-powered teams work at the intersection of design, data, and development
+                    to craft scalable solutions. We bring clarity to complex builds, engineering every layer with
+                    purpose and performance in mind.</p>
+                  <p class="ab-who__text">With deep product insight and technical expertise, we support businesses ready
+                    to scale and lead. Every solution we create is built to adapt, grow, and deliver long-term value.
+                  </p>
+                </div>
+                <div class="ab-stats-inline">
+                  <div class="ab-stat-inline"><span>Projects delivered</span><b data-count>4.1K+</b></div>
+                  <div class="ab-stat-inline"><span>Hustlers under one roof</span><b data-count>35+</b></div>
+                  <div class="ab-stat-inline"><span>Funds raised for startups</span><b data-count>$9m</b></div>
+                  <div class="ab-stat-inline"><span>Years of excellence</span><b data-count>8+</b></div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="ab-rule" style="margin-top:48px">
+
+            <div class="ab-cards-3 ab-who-cards" data-reveal-group>
+              <article class="ab-tile" data-reveal><img class="ab-tile__ico" src="../assets/images/group-1410088646.png"
+                  alt="" width="54" height="54">
+                <hr class="ab-tile__rule">
+                <h3>Mission</h3>
+                <p>Building smarter technology for a stronger business future.</p>
+              </article>
+              <article class="ab-tile ab-tile--alt" data-reveal><img class="ab-tile__ico"
+                  src="../assets/images/group-1410088647.png" alt="" width="54" height="54">
+                <hr class="ab-tile__rule">
+                <h3>Vision</h3>
+                <p>Building a future where innovation drives business success.</p>
+              </article>
+              <article class="ab-tile" data-reveal><img class="ab-tile__ico" src="../assets/images/group-1410088648.png"
+                  alt="" width="54" height="54">
+                <hr class="ab-tile__rule">
+                <h3>Values</h3>
+                <p>Trust, Accountability, Innovation, &amp; Excellence.</p>
+              </article>
+            </div>
+            <div class="ab-btn-row"><a class="ab-btn ab-btn--grad" href="#contact"><span class="ab-btn__label">Discuss
+                  Your Project</span><img class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a></div>
+          </div>
+        </section>
+
+        <!-- ================= DESIGN. DEVELOP. DISRUPT ================= -->
+        <section class="ab-section ab-steps ab-pad" data-sticky-section>
+          <div class="layout-container-lg ab-steps__grid">
+            <div class="ab-steps__left">
+              <div class="ab-steps__sticky" data-sticky-inner>
+                <h2 class="ab-h2">Design. Develop. Disrupt<br><em>Intelligently With Us</em></h2>
+                <p class="ab-lede">End-to-end software solutions to take your idea from concept to real impact.</p>
+              </div>
+            </div>
+            <div class="ab-steps__right">
+              <article class="ab-step" data-reveal>
+                <div class="ab-step__top"><span class="ab-step__num">01</span><img class="ab-step__ico"
+                    src="../assets/images/group-1410086674.png" alt="" width="54" height="54" loading="lazy"></div>
+                <h3>Bring Your Blueprint To Life</h3>
+                <p>Turn bold ideas into working digital platforms with lean execution and AI-powered agility. Built to
+                  scale, built to impress—right from the start.</p><a class="ab-link" href="#contact">Let’s Discuss Your
+                  Need<svg class="" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#ab-ne" />
+                  </svg></a>
+              </article>
+              <article class="ab-step" data-reveal>
+                <div class="ab-step__top"><span class="ab-step__num">02</span><img class="ab-step__ico"
+                    src="../assets/images/group-1410086675.png" alt="" width="54" height="54" loading="lazy"></div>
+                <h3>Accelerate Growth<br>With Scalable Solutions</h3>
+                <p>We architect future-ready, AI-powered platforms that drive scalable growth and long-term value; built
+                  to meet your strategic goals.</p><a class="ab-link" href="#contact">Let’s Collaborate<svg class=""
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#ab-ne" />
+                  </svg></a>
+              </article>
+              <article class="ab-step" data-reveal>
+                <div class="ab-step__top"><span class="ab-step__num">03</span><img class="ab-step__ico"
+                    src="../assets/images/group-1410086679.png" alt="" width="54" height="54" loading="lazy"></div>
+                <h3>Align Minds For Perfect Outcome</h3>
+                <p>We close the gap between vision and execution by aligning designers, developers, and stakeholders on
+                  one seamless track.</p><a class="ab-link" href="#contact">Let’s Join Forces<svg class=""
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#ab-ne" />
+                  </svg></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= OUR STORY ================= -->
+        <section class="ab-section ab-section--light ab-pad" id="our-story">
+          <div class="layout-container-lg">
+            <div class="ab-story">
+              <div class="ab-story__side">
+                <div class="ab-eyebrow">[OUR STORY]</div>
+                <div class="ab-story__copy">
+                  <p>Our team, based across the USA, brings together developers, designers, and digital strategists who
+                    thrive on solving real-world challenges. We work fast, think lean, and deliver digital solutions
+                    built to grow.</p>
+                  <p>Beyond the screens, we’re a tight-knit crew that celebrates wins, supports each other, and believes
+                    a little fun fuels great work. Think Friday brainstorms with coffee, code reviews with laughter, and
+                    a culture built on trust and creativity.</p>
+                  <a class="ab-btn ab-btn--grad" href="#contact"><span class="ab-btn__label">Get a Free
+                      Consultation</span><img class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="ab-story__main">
+                <h2 class="ab-h2"><em class="is-blue">At Whizcamp,</em> We Blend Product-Thinking With Performance -
+                  First Execution.</h2>
+                <img class="ab-story__img" src="../assets/images/about-images/Our-Story.webp"
+                  alt="The Whizcamp team in a planning session" loading="lazy" data-reveal>
+              </div>
+            </div>
+            <hr class="ab-rule" style="margin-top:72px">
+          </div>
+        </section>
+
+        <!-- ================= WHAT WE CAN HELP YOU WITH ================= -->
+        <section class="ab-section ab-section--light" style="padding-bottom:96px">
+          <div class="layout-container-lg">
+            <div class="ab-head" style="margin-bottom:40px">
+              <h2 class="ab-h2">What We Can <em>Help You With</em></h2>
+              <p class="ab-lede" style="max-width:390px">Our expertise lies in developing innovative software solutions
+                that address the unique challenges faced by modern businesses, empowering them to stay ahead in today’s
+                dynamic market landscape.</p>
+            </div>
+            <div class="ab-chips" data-reveal-group>
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/visioning.png" alt="Visioning" width="54" height="54"
+                    loading="lazy">
+                </span>
+                <span>Visioning</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--gold" aria-hidden="true">
+                  <img src="../assets/images/about-images/planning.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Planning</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/Research.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Research</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--blue" aria-hidden="true">
+                  <img src="../assets/images/about-images/Networking.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Networking</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--gold" aria-hidden="true">
+                  <img src="../assets/images/about-images/Branding.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Branding</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/Marketing.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Marketing</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--blue" aria-hidden="true">
+                  <img src="../assets/images/about-images/Hiring.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Hiring</span>
+              </div>
+
+              <div class="ab-chip" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/Operation.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <span>Operation</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= COMMUNITY & SUSTAINABILITY ================= -->
+        <section class="ab-section ab-glow-dark ab-pad">
+          <div class="layout-container-lg">
+            <div class="ab-head">
+              <h2 class="ab-h2"><em>Whizcamp’s</em> Commitment<br>To Community &amp; Sustainability</h2>
+              <p class="ab-lede" style="max-width:340px">We believe in building tech with purpose—where people, planet,
+                and progress go hand in hand. It’s our way of giving back while moving the world forward.</p>
+            </div>
+            <div class="ab-commit" data-reveal-group>
+              <article class="ab-commit__card" data-reveal>
+                <div class="ab-commit__media"><img src="../assets/images/about-images/Educational-Collaborations.webp"
+                    alt="Educational Collaborations" loading="lazy"></div>
+                <div class="ab-commit__body">
+                  <h3>Educational Collaborations</h3>
+                  <p>Partnering with institutions to empower students through mentorships, live projects, and tech
+                    training.</p>
+                </div>
+              </article>
+              <article class="ab-commit__card" data-reveal>
+                <div class="ab-commit__media"><img src="../assets/images/about-images/Community-Engagement.webp"
+                    alt="Community Engagement" loading="lazy"></div>
+                <div class="ab-commit__body">
+                  <h3>Community Engagement</h3>
+                  <p>We back local initiatives and startups, creating meaningful change where innovation meets
+                    compassion.</p>
+                </div>
+              </article>
+              <article class="ab-commit__card" data-reveal>
+                <div class="ab-commit__media"><img src="../assets/images/about-images/Pro-Bono-Services.webp"
+                    alt="Pro Bono Services" loading="lazy"></div>
+                <div class="ab-commit__body">
+                  <h3>Pro Bono Services</h3>
+                  <p>Supporting nonprofits with tech solutions that amplify their mission and maximize their reach.</p>
+                </div>
+              </article>
+              <article class="ab-commit__card" data-reveal>
+                <div class="ab-commit__media"><img src="../assets/images/about-images/EnvironmentalResponsibility.webp"
+                    alt="Environmental Responsibility" loading="lazy"></div>
+                <div class="ab-commit__body">
+                  <h3>Environmental Responsibility</h3>
+                  <p>From green hosting to mindful development practices we’re always reducing our digital footprint.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="ab-btn-row"><a class="ab-btn ab-btn--light" href="#contact"><span class="ab-btn__label">Discuss
+                  Your Project</span><img class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a></div>
+          </div>
+        </section>
+
+        <!-- ================= WHAT SETS US APART (stats band) ================= -->
+        <section class="ab-band ab-pad" aria-labelledby="ab-apart">
+          <div class="layout-container-lg ab-wrap">
+            <h2 class="ab-h2" id="ab-apart">What Sets <em>Apart ?</em></h2>
+            <p class="ab-lede">We bring together tech, creativity, and future-ready thinking to engineer what tomorrow
+              needs today.</p>
+            <div class="ab-stats">
+              <div class="ab-stat"><b data-count>4.1K+</b><span>Projects delivered</span></div>
+              <div class="ab-stat"><b data-count>25+</b><span>Years leadership experience</span></div>
+              <div class="ab-stat"><b data-count>2+</b><span>Global offices</span></div>
+              <div class="ab-stat"><b data-count>35+</b><span>Team members</span></div>
+              <div class="ab-stat"><b data-count>6+</b><span>Industries served</span></div>
+              <div class="ab-stat"><b data-count>5+</b><span>Countries served</span></div>
+              <div class="ab-stat"><b data-count>$9M+</b><span>Funds raised for startups</span></div>
+              <div class="ab-stat"><b data-count>99%</b><span>Client satisfaction</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= PRINCIPLES ================= -->
+        <section class="ab-section ab-section--light ab-pad" id="principles">
+          <div class="layout-container-lg">
+            <div class="ab-principles__head">
+              <div class="ab-eyebrow">[WORK ETHICS]</div>
+              <h2 class="ab-h2"><em class="is-blue">The Principles</em> Behind Our Work</h2>
+              <p class="ab-lede">Whizcamp operates with integrity, upholding ethical standards and professionalism to
+                consistently deliver the best results for our clients.</p>
+            </div>
+            <div class="ab-principles">
+              <div>
+                <ul class="ab-acc" data-acc>
+                  <li class="ab-acc__item is-open"><button class="ab-acc__row" type="button" aria-expanded="true"
+                      aria-controls="ab-acc-0">
+                      <span class="ab-acc__idx">01</span><span class="ab-acc__title">Healthcare and Wellness</span><svg
+                        class="ab-acc__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#ab-right" />
+                      </svg></button>
+                    <div class="ab-acc__panel" id="ab-acc-0" role="region">
+                      <div>
+                        <p>We take ownership of our work and deliver with consistency, care, and clarity.</p>
+                      </div>
+                    </div><span class="ab-acc__progress" aria-hidden="true"></span>
+                  </li>
+                  <li class="ab-acc__item"><button class="ab-acc__row" type="button" aria-expanded="false"
+                      aria-controls="ab-acc-1">
+                      <span class="ab-acc__idx">02</span><span class="ab-acc__title">Open Minds, Honest
+                        Conversations</span><svg class="ab-acc__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#ab-right" />
+                      </svg></button>
+                    <div class="ab-acc__panel" id="ab-acc-1" role="region">
+                      <div>
+                        <p>We listen first, share openly, and treat every question as a chance to build trust.</p>
+                      </div>
+                    </div><span class="ab-acc__progress" aria-hidden="true"></span>
+                  </li>
+                  <li class="ab-acc__item"><button class="ab-acc__row" type="button" aria-expanded="false"
+                      aria-controls="ab-acc-2">
+                      <span class="ab-acc__idx">03</span><span class="ab-acc__title">Adaptive by Nature</span><svg
+                        class="ab-acc__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#ab-right" />
+                      </svg></button>
+                    <div class="ab-acc__panel" id="ab-acc-2" role="region">
+                      <div>
+                        <p>Markets and needs change fast. We adjust our plans without losing sight of the goal.</p>
+                      </div>
+                    </div><span class="ab-acc__progress" aria-hidden="true"></span>
+                  </li>
+                  <li class="ab-acc__item"><button class="ab-acc__row" type="button" aria-expanded="false"
+                      aria-controls="ab-acc-3">
+                      <span class="ab-acc__idx">04</span><span class="ab-acc__title">Transparent from Day One</span><svg
+                        class="ab-acc__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#ab-right" />
+                      </svg></button>
+                    <div class="ab-acc__panel" id="ab-acc-3" role="region">
+                      <div>
+                        <p>Clear scope, honest timelines, and regular updates so you always know where things stand.</p>
+                      </div>
+                    </div><span class="ab-acc__progress" aria-hidden="true"></span>
+                  </li>
+                </ul>
+                <div class="ab-principles__cta"><a class="ab-btn ab-btn--grad" href="#contact"><span
+                      class="ab-btn__label">Get a Free Consultation</span><img class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a></div>
+              </div>
+              <div class="ab-principles__visual" data-principles-visual aria-live="polite">
+                <img class="ab-principles__img is-active" src="../assets/images/rectangle-25048.webp"
+                  alt="A care professional guiding two seniors through an exercise" loading="lazy" data-reveal>
+                <img class="ab-principles__img" src="../assets/images/rectangle-25046.webp"
+                  alt="Whizcamp team members working together" loading="lazy">
+                <img class="ab-principles__img" src="../assets/images/rectangle-25042.webp"
+                  alt="A team adapting ideas into a working solution" loading="lazy">
+                <img class="ab-principles__img" src="../assets/images/rectangle-25043.webp"
+                  alt="A team reviewing project progress" loading="lazy">
+              </div>
+            </div>
+            <hr class="ab-rule" style="margin-top:80px">
+          </div>
+        </section>
+
+        <!-- ================= CULTURE ================= -->
+        <section class="ab-section ab-section--light ab-culture" style="padding-bottom:96px">
+          <div class="layout-container-lg">
+            <div class="ab-head ab-head--center" style="margin-bottom:0">
+              <h2 class="ab-h2"><em>Whizcamp</em> Culture</h2>
+              <p class="ab-lede">Whizcamp nurtures a people-first environment driven by purpose, balance, and growth.
+              </p>
+            </div>
+            <div class="ab-cards-3" data-reveal-group>
+
+              <article class="ab-tile" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/Owernership.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <hr class="ab-tile__rule">
+                <h3>Ownership Mindset</h3>
+                <p>Everyone takes charge like it’s their own company because every action truly counts.</p>
+              </article>
+
+              <article class="ab-tile ab-tile--alt" data-reveal>
+                <span class="ab-ico ab-ico--gold" aria-hidden="true">
+                  <img src="../assets/images/about-images/Health-Comes.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <hr class="ab-tile__rule">
+                <h3>Health Comes First</h3>
+                <p>Wellness days, mental health support, and a culture that respects personal space.</p>
+              </article>
+
+              <article class="ab-tile" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/WorkNoctice.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <hr class="ab-tile__rule">
+                <h3>Work That Gets Noticed</h3>
+                <p>Real efforts bring real rewards, bonuses, shout-outs, and more.</p>
+              </article>
+
+              <article class="ab-tile ab-tile--alt" data-reveal>
+                <span class="ab-ico ab-ico--gold" aria-hidden="true">
+                  <img src="../assets/images/about-images/Workplay.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <hr class="ab-tile__rule">
+                <h3>Work + Play = Whizcamp</h3>
+                <p>Foosball matches, game nights, fun Fridays where energy never dips here.</p>
+              </article>
+
+              <article class="ab-tile" data-reveal>
+                <span class="ab-ico ab-ico--gray" aria-hidden="true">
+                  <img src="../assets/images/about-images/MomentsMatter.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <hr class="ab-tile__rule">
+                <h3>Moments That Matter</h3>
+                <p>From birthdays to big wins, we celebrate everything that makes us a team.</p>
+              </article>
+
+              <article class="ab-tile ab-tile--alt" data-reveal>
+                <span class="ab-ico ab-ico--blue" aria-hidden="true">
+                  <img src="../assets/images/about-images/Growth.png" alt="" width="54" height="54" loading="lazy">
+                </span>
+                <hr class="ab-tile__rule">
+                <h3>Growth with Purpose</h3>
+                <p>Every role has a path. Every step forward is supported and celebrated.</p>
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= R&D ================= -->
+        <section class="ab-section ab-glow-dark ab-pad">
+          <div class="layout-container-lg">
+            <div class="ab-head">
+              <h2 class="ab-h2"><em>Future-Proof</em> Your Business With<br>Whizcamp's <em>R&amp;D Solutions</em></h2>
+              <p class="ab-lede" style="max-width:340px">Staying ahead of the curve is crucial. Whizcamp’s R&amp;D team
+                is dedicated to pushing boundaries and developing cutting-edge tech solutions that transform the way you
+                do business.</p>
+            </div>
+            <div class="ab-rd">
+              <div class="ab-rd__col">
+                <article class="ab-rd__card" data-reveal><img src="../assets/images/about-images/BlockchainIntegration.webp"
+                    alt="Blockchain Integration" loading="lazy">
+                  <h3>Blockchain Integration</h3>
+                  <p>We help partners verify transactions and trace assets through a shared record they can audit.</p>
+                  <div class="ab-tags"><span class="ab-tag">Shared Ledgers</span><span class="ab-tag">Transaction
+                      Verification</span></div>
+                </article>
+                <article class="ab-rd__card" data-reveal><img src="../assets/images/about-images/AI-Powered-Automation.webp"
+                    alt="AI-Powered Automation" loading="lazy">
+                  <h3>AI-Powered Automation</h3>
+                  <p>We use AI to sort requests, extract details from documents, and flag exceptions for your team to
+                    review.</p>
+                  <div class="ab-tags"><span class="ab-tag">Document Extraction</span><span class="ab-tag">Exception
+                      Flagging</span></div>
+                </article>
+              </div>
+              <div class="ab-rd__col">
+                <article class="ab-rd__card" data-reveal><img src="../assets/images/about-images/Virtual-AugmentedReality.webp"
+                    alt="Virtual and Augmented Reality" loading="lazy">
+                  <h3>Virtual and Augmented Reality</h3>
+                  <p>We create simulations for hands-on training and interactive previews that let customers see
+                    products in their own space.</p>
+                  <div class="ab-tags"><span class="ab-tag">3D Simulations</span><span class="ab-tag">Product
+                      Previews</span></div>
+                </article>
+                <article class="ab-rd__card" data-reveal><img src="../assets/images/about-images/Internet-of-things.webp"
+                    alt="Internet of Things (IoT)" loading="lazy">
+                  <h3>Internet of Things (IoT)</h3>
+                  <p>We connect sensors and devices so your team can monitor equipment, spot changes, and respond to
+                    alerts.</p>
+                  <div class="ab-tags"><span class="ab-tag">Device Monitoring</span><span class="ab-tag">Real-time
+                      Alerts</span></div>
+                </article>
+              </div>
+            </div>
+            <div class="ab-btn-row"><a class="ab-btn ab-btn--light" href="#contact"><span class="ab-btn__label">Discuss
+                  Your Project</span><img class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a></div>
+          </div>
+        </section>
+
+        <!-- ================= FOUNDER ================= -->
+        <section class="ab-band ab-pad" aria-labelledby="ab-mind">
+          <div class="layout-container-lg ab-wrap">
+            <div class="ab-founder">
+              <div class="ab-founder__left">
+                <h2 id="ab-mind">Meet The Mind Behind Whizcamp</h2>
+                <p>At the heart of Whizcamp is a clear mission—empowering businesses to scale and innovate through
+                  intelligent, future-ready digital solutions. Spearheaded by Mr. Jagdip Singh, Whizcamp combines
+                  visionary thinking with technical precision to create software that drives real-world impact.</p>
+                <p>With a passion for innovation and teamwork, Mr. Singh leads our expert team in building
+                  transformative SaaS platforms, AI-driven systems, and smart product ecosystems. His belief?</p>
+                <blockquote class="ab-quote">“We’re not just coding; we’re co-creating the future of digital
+                  transformation.”</blockquote>
+              </div>
+              <div class="ab-founder__right">
+                <h2 class="ab-h2">Let's Dive<br>Into <em>Your Needs.</em></h2>
+                <p class="ab-lede">We believe the best solutions are born from understanding your unique needs. Let’s
+                  connect for a personalized consultation!</p>
+                <div class="ab-person">
+                  <img src="../assets/images/ellipse-1420.webp" alt="Jagdip Singh" width="106" height="106"
+                    loading="lazy">
+                  <div><b>Jagdip Singh</b><span>Co-Founder &amp; CTO</span></div>
+                </div>
+                <a class="ab-btn ab-btn--outline" href="#contact"><span class="ab-btn__label">Book a Meeting</span><img
+                    class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= JOIN ================= -->
+        <section class="ab-section ab-section--light ab-pad" id="contact">
+          <div class="layout-container-lg">
+            <div class="ab-join">
+              <div>
+                <h2 class="ab-h2">Be Part<br>Of The <em class="is-blue">Digital Revolution</em></h2>
+                <a class="ab-btn ab-btn--grad" href="#contact"><span class="ab-btn__label">Join Us in Innovating
+                    Today</span><img class="ab-btn__ico" src="../assets/images/group-1410088626-2.png" alt="" aria-hidden="true"></a>
+              </div>
+              <p><strong>From blockchain to cloud, AI to AR/VR,</strong> our solutions empower businesses to operate
+                smarter, faster, and with greater agility. join us in building bold, innovative solutions that move the
+                world forward.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== shared footer (identical to home) ===== -->
+        <div class="homepage-footer">
+          <div class="frame-65">
+            <div class="frame-66">
+              <div class="ellipse-4"></div>
+            </div>
+            <div class="frame-67">
+              <div class="ellipse-5"></div>
+            </div>
+          </div>
+          <div class="whizcamp">WHIZCAMP</div>
+          <p class="we-custom-develop">
+            We Custom-develop Solutions<br />that Help You Unlock A Sea Of<br />potential
+            Opportunities.
+          </p>
+          <img class="vector-17" src="../assets/icons/vector-7.svg" />
+          <div class="group-218">
+            <img class="vector-18" src="../assets/icons/vector-7.svg" />
+            <div class="group-219">
+              <div class="group-220">
+                <img class="whizcamp-logo-footer" src="../assets/images/footer-logo.png" />
+
+              </div>
+              <p class="text-wrapper-134">
+                We empower businesses to scale digitally through innovation,
+                strategy, and smart development. Driven by passion, powered by
+                technology: we turn ideas into impact.
+              </p>
+            </div>
+            <div class="group-223">
+              <div class="group-224">
+                <div class="text-wrapper-135">Services</div>
+                <div class="frame-68">
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      AI &amp; Machine Learning
+                    </div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Cyber security</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Mobile App Development</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Website Development</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">DevOps &amp; Clouds</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Digital Marketing</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">IT Staff Augmentation</div>
+                  </div>
+                </div>
+              </div>
+              <div class="group-225">
+                <div class="text-wrapper-137">Industries</div>
+                <div class="frame-71">
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      Healthcare &amp; Wellness
+                    </div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Travel Hospitality</div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      Logistics &amp; Transportation
+                    </div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Retail &amp; E-Commerce</div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Food Delivery Solutions</div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      Education &amp; E-Learning
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-72">
+                <div class="text-wrapper-138">Our Location</div>
+                <div class="frame-73">
+                  <div class="group-226">
+                    <p class="text-wrapper-139">
+                      1595, 701 Tillery Street Unit 12, Austin, TX, Travis, US,
+                      78702
+                    </p>
+                    <img class="group-227" src="../assets/images/group-1410088721-6.png" />
+                  </div>
+                  <div class="group-228">
+                    <div class="text-wrapper-140">info@whizcamp.us</div>
+                    <img class="group-227" src="../assets/images/group-1410088721-7.png" />
+                  </div>
+                  <div class="group-228">
+                    <div class="text-wrapper-140">+1(737) 371-9006</div>
+                    <img class="group-227" src="../assets/images/group-1410088721-8.png" />
+                  </div>
+                  <div class="group-229">
+                    <p class="text-wrapper-140">
+                      10:00 AM-07:00 PM PST<br />Monday - Friday
+                    </p>
+                    <img class="group-227" src="../assets/images/group-1410088721-9.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-230">
+              <p class="text-wrapper-141">
+                Copyright ©2026 Whizcamp LLC. All right reserved
+              </p>
+              <div class="frame-74">
+                <div class="text-wrapper-142">Privacy Policy</div>
+                <div class="ellipse-18"></div>
+                <div class="text-wrapper-142">Term &amp; Conditions</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-pill--data-intelligence">
+            <div class="text-wrapper-143">Data Intelligence</div>
+          </div>
+          <div class="footer-pill--growth-strategy">
+            <div class="text-wrapper-144">Growth Strategy</div>
+          </div>
+          <div class="footer-pill--experience-design">
+            <div class="text-wrapper-144">Experience Design</div>
+          </div>
+          <div class="footer-pill--ai-engineering">
+            <div class="text-wrapper-143">AI Engineering</div>
+          </div>
+          <div class="footer-pill--cloud-architecture">
+            <div class="text-wrapper-143">Cloud Architecture</div>
+          </div>
+          <div class="footer-pill--digital-transformation">
+            <div class="text-wrapper-144">Digital Transformation</div>
+          </div>
+          <div class="footer-pill--product-strategy">
+            <div class="text-wrapper-144">Product Strategy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/mega-menu.js" defer></script>
+  <script src="../assets/js/pages/about.js" defer></script>
+</body>
+
 </html>
