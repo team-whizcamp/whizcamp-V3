@@ -177,11 +177,54 @@
 .ab-tile__rule { border: 0; border-top: 1px solid var(--ab-line); margin: 14px 0 18px; }
 .ab-tile h3 { margin: 0 0 8px; font: 500 22px/1.25 "Google Sans Flex", "DM Sans", sans-serif; color: var(--ab-ink); }
 .ab-tile p { margin: 0; font: 400 14px/1.55 "DM Sans", sans-serif; color: var(--ab-muted); }
-.ab-who-cards { margin-top: 36px; }
-.ab-who-cards .ab-tile { padding: 22px; }
-.ab-who-cards .ab-tile__ico { width: 54px; height: 54px; }
-.ab-who-cards .ab-tile h3 { font-size: 24px; margin-bottom: 0; }
-.ab-who-cards .ab-tile__rule { margin: 12px 0 14px; }
+.ab-who-cards {
+  margin-top: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
+}
+.ab-who-cards .ab-tile {
+  height: 240px;
+  min-height: 240px;
+  box-sizing: border-box;
+  padding: 30px;
+  border: 1px solid #2525251f;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: #f6f6f6;
+  transition: transform .5s var(--ab-ease), box-shadow .5s ease,
+    background-color .4s ease, border-color .4s ease;
+}
+.ab-who-cards .ab-tile--alt { background: #2525250a; border-color: transparent; }
+.ab-who-cards .ab-tile__ico { width: 54px; height: 54px; flex: none; transition: transform .55s cubic-bezier(.34,1.56,.64,1); }
+.ab-who-cards .ab-tile h3 {
+  margin: 16px 0 0;
+  font: 600 24px/30px "Google Sans Flex", "DM Sans", sans-serif;
+  color: #252525;
+  transition: color .35s ease;
+}
+.ab-who-cards .ab-tile__rule { width: 100%; margin: 11px 0 19px; border-top-color: #2525251f; }
+.ab-who-cards .ab-tile p { margin: 0; font: 400 16px/24px "DM Sans", sans-serif; color: #646464; }
+.ab-who-cards + .ab-btn-row { margin-top: 48px; }
+.ab-who-cards + .ab-btn-row .ab-btn { width: 262px; height: 54px; }
+.ab-who-cards + .ab-btn-row .ab-btn__label {
+  width: 208px;
+  height: 54px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.ab-who-cards + .ab-btn-row .ab-btn__ico { width: 54px; height: 54px; margin-left: 0; }
+@media (hover: hover) {
+  .ab-who-cards .ab-tile:hover {
+    transform: translateY(-8px);
+    background-color: #fff;
+    border-color: #00baf533;
+    box-shadow: 0 16px 34px rgba(0,186,245,.16), 0 4px 10px rgba(0,0,0,.04);
+  }
+  .ab-who-cards .ab-tile:hover .ab-tile__ico { transform: scale(1.12) rotate(-6deg); }
+  .ab-who-cards .ab-tile:hover h3 { color: #00a0d6; }
+}
 
 /* icon tiles (inline SVG) */
 .ab-ico { width: 54px; height: 54px; border-radius: 10px; display: grid; place-items: center; flex: none; }
@@ -236,12 +279,12 @@
 .ab-step h3 { margin: 4px 0 10px; font: 600 24px/1.25 "DM Sans", sans-serif; }
 .ab-step p { margin: 0 0 16px; font: 400 14px/1.55 "DM Sans", sans-serif; color: var(--ab-muted); max-width: 400px; }
 .ab-link {
-  display: inline-flex; align-items: center; gap: 6px; font: 600 14px/1 "DM Sans", sans-serif;
+  display: inline-flex; align-items: center; gap: 6px; font: 600 16px/1 "DM Sans", sans-serif;
   background: linear-gradient(90deg, #14b3c9, #6fb86a); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .ab-link svg {
-  width: 13px;
-  height: 13px;
+  width: 36px;
+  height: 21px;
   color: #4cb88a;
   transform-origin: center;
   transition: transform .35s var(--ab-ease);
@@ -283,7 +326,7 @@
   background-image:
     radial-gradient(480px 480px at 0% 12%, rgba(255,187,0,.20), transparent 70%),
     radial-gradient(620px 620px at 100% 55%, rgba(0,186,245,.18), transparent 70%); }
-.ab-commit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ab-commit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;    width: 96%;justify-content: center;margin: auto; }
 .ab-commit__card { background: #fff; color: var(--ab-ink); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
 .ab-commit__media { aspect-ratio: 626 / 240; overflow: hidden; }
 .ab-commit__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s var(--ab-ease); }
@@ -333,9 +376,22 @@
 }
 .ab-acc__row:focus-visible { outline: 2px solid var(--ab-blue); outline-offset: 2px; }
 .ab-acc__idx { font: 400 18px/1 "DM Sans", sans-serif; }
-.ab-acc__arrow { width: 18px; height: 18px; stroke: var(--ab-green); fill: none; stroke-width: 2.2; transition: transform .45s var(--ab-ease); }
+.ab-acc__arrow {
+  width: 18px;
+  height: 18px;
+  stroke: var(--ab-green);
+  fill: none;
+  stroke-width: 2.2;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .45s var(--ab-ease);
+}
 .ab-acc__item.is-open .ab-acc__title { font-weight: 600; }
-.ab-acc__item.is-open .ab-acc__arrow { transform: rotate(90deg); }
+.ab-principles .ab-acc__arrow { transform: rotate(0deg); }
+.ab-principles .ab-acc__item.is-open .ab-acc__arrow,
+.ab-principles .ab-acc__row[aria-expanded="true"] .ab-acc__arrow {
+  transform: rotate(90deg) !important;
+}
 .ab-acc__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s var(--ab-ease); }
 .ab-acc__item.is-open .ab-acc__panel { grid-template-rows: 1fr; }
 .ab-acc__panel > div { overflow: hidden; padding-left: 48px; }
@@ -348,7 +404,7 @@
 .ab-acc.is-paused .ab-acc__progress { animation-play-state: paused; }
 @keyframes ab-progress { to { transform: scaleX(1); } }
 .ab-principles__cta { margin-top: 30px; }
-.ab-principles__visual { position: relative; width: 100%; aspect-ratio: 366 / 396; overflow: hidden; border-radius: 12px; background: #e9e9e9; }
+.ab-principles__visual { position: relative; width: 100%;     aspect-ratio: 360 / 292; overflow: hidden; border-radius: 12px; background: #e9e9e9; }
 .ab-principles__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; opacity: 0; transition: opacity .45s ease; }
 .ab-principles__img.is-active { opacity: 1; }
 
@@ -434,6 +490,10 @@
   .ab-stat::before { display: none; }
   .ab-story__side { order: 2; }
   .ab-principles__visual { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 600px) {
+  .ab-who-cards { grid-template-columns: minmax(0, 1fr); }
+  .ab-who-cards .ab-tile { height: auto; min-height: 240px; }
 }
 @media (min-width: 1024px) {
   .ab-steps__grid { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }

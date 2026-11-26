@@ -213,8 +213,7 @@
   }
 
   function update() {
-    const tickerH = ticker ? ticker.offsetHeight : 0;
-    const next = window.scrollY > tickerH + 20;
+    const next = window.scrollY > 50;
 
     header.classList.toggle('wc-stuck', next);
     document.body.classList.toggle('wc-is-stuck', next);

@@ -897,13 +897,11 @@ body {
   display: flex;
   border-radius: 15px;
   border: none;
-  backdrop-filter: blur(3px) brightness(100%);
-  -webkit-backdrop-filter: blur(3px) brightness(100%);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
+  background: linear-gradient( 135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.1) 100% );
+    backdrop-filter: blur(3px) brightness(100%);;
+  -webkit-backdrop-filter: blur(0) brightness(100%);
+  transition: background-color .35s ease, backdrop-filter .35s ease,
+    -webkit-backdrop-filter .35s ease;
 }
 
 .homepage .group-25::before {

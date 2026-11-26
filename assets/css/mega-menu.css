@@ -238,6 +238,15 @@ body.wc-is-stuck .wc-stickbar { opacity: 1; transform: none; }
   background: transparent !important;
 }
 
+/* Homepage scroll state: turn the header itself into the white glass surface. */
+.homepage .group-25.wc-stuck {
+  /* The separate sticky bar supplies the white surface; keep the full-width
+     header wrapper transparent so it cannot cover hero content below the nav. */
+  background: transparent !important;
+  -webkit-backdrop-filter: blur(3px) brightness(100%) !important;
+  backdrop-filter: none !important;
+}
+
 /* pill transparent, bina border/shadow, taaki bar ke saath mil jaye */
 .group-25.wc-stuck .mm-stickybg { display: none !important; }
 .group-25.wc-stuck::before,
