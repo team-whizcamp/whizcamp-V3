@@ -8,9 +8,12 @@
 
 /* ---------- sticky header (original) ---------- */
 .group-25 {
-  z-index: 1000;                       /* above overlay + page content */
+  z-index: 1005;                       /* above the page dimmer and its content */
   will-change: translate;
+  isolation: isolate;
 }
+.group-25 > .group-26 { z-index: 2; }
+.group-25 .frame-10 { position: relative; z-index: 2; }
 .group-25.is-stuck-fixed { position: fixed !important; margin: 0 !important; }
 
 .group-26 { isolation: isolate; }
@@ -32,19 +35,28 @@
 
 /* ---------- dim overlay ---------- */
 .mm-overlay {
-  position: absolute; left: 0; width: 100%; bottom: 0; z-index: 900;
+  position: fixed; inset: var(--mm-overlay-top, 0px) 0 0; z-index: 1;
   background: rgba(8, 10, 16, .38);
   opacity: 0; pointer-events: none; transition: opacity .25s ease;
 }
-.mm-overlay.is-on { opacity: 1; pointer-events: auto; }
+.mm-overlay.is-on { opacity: 1; pointer-events: none; }
 
 /* ---------- root / stage ---------- */
 .mm-root, .mm-root *, .mm-root *::before, .mm-root *::after { box-sizing: border-box; }
 .mm-root {
-  position: absolute; left: 0; right: 0; top: 124%;
+  position: absolute; left: 0; right: 0; top: 100%;
   container-type: inline-size;
-  z-index: 5;
+  z-index: 1006;
   pointer-events: none;
+}
+.mm-root::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -.9cqw;
+  height: 1.8cqw;
+  pointer-events: auto;
 }
 .mm-stage {
   display: grid; padding-top: .85cqw;      /* gap between header and panel */
@@ -62,11 +74,28 @@
   overflow: hidden;
   box-shadow: 0 1.5em 3.5em rgba(0, 0, 0, .28);
   visibility: hidden; opacity: 0; transform: translateY(-.6em);
+  pointer-events: none;
   transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
 }
 .mm-panel.is-active {
   visibility: visible; opacity: 1; transform: none; pointer-events: auto;
+  background-color: #f6f6f6;
+  isolation: isolate;
   transition: opacity .22s ease, transform .22s ease, visibility 0s;
+}
+.mm-panel.is-active > .mm-main,
+.mm-panel.is-active > .mm-intro {
+  opacity: 1;
+}
+.mm-panel.is-active > .mm-main { background-color: #f6f6f6; }
+.mm-panel.is-active > .mm-feature--cream { background-color: #f7f0dd; }
+.mm-panel.is-active > .mm-feature--blue { background-color: #e3f2f7; }
+
+/* A clipped/paint-contained page shell can otherwise trap the dropdown and
+   its backdrop in separate stacking contexts. Keep the page shell neutral. */
+html body .responsive-stage,
+html body .homepage {
+  isolation: auto !important;
 }
 :where(.mm-panel) a { color: inherit; text-decoration: none; }
 :where(.mm-panel) :where(h3, h4, p, ul) { margin: 0; padding: 0; }

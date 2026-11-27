@@ -83,6 +83,8 @@
   if (root) {
     overlay = document.createElement('div');
     overlay.className = 'mm-overlay';
+    // Keep the backdrop in the same page stacking context as the header.
+    // It must sit above page content but below the menu.
     home.appendChild(overlay);
 
     Object.keys(map).forEach(function (name) {
@@ -110,12 +112,12 @@
     // hovering other nav items (About / Industries / Insights) closes the menu
     var nav = document.querySelector('.frame-10');
     if (nav) nav.addEventListener('pointerover', function (e) {
-      if (!e.target.closest('[data-mm-trigger]') && e.pointerType === 'mouse') scheduleClose(80);
+      if (!e.target.closest('[data-mm-trigger]') && e.pointerType === 'mouse') scheduleClose();
     });
     overlay.addEventListener('click', close);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
     document.addEventListener('click', function (e) {
-      if (current && !e.target.closest('[data-mm-root], [data-mm-trigger]')) close();
+      if (current && !e.target.closest('.group-25, [data-mm-root]')) close();
     });
   }
 
@@ -156,7 +158,7 @@
       var hr = home.getBoundingClientRect();
       top = (ticker.getBoundingClientRect().bottom - hr.top) / scale;
     }
-    overlay.style.top = Math.max(0, top) + 'px';
+    overlay.style.setProperty('--mm-overlay-top', Math.max(0, top) + 'px');
   }
 
   /* ---------------------------------------------------------

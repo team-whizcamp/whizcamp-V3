@@ -350,7 +350,7 @@
 .ab-band .ab-wrap { text-align: center; }
 .ab-band .ab-h2 { font-size: clamp(28px, 2.8vw, 40px); }
 .ab-band .ab-lede { max-width: 640px; margin: 14px auto 0; font-size: 14px; }
-.ab-stats { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); text-align: left; }
+.ab-stats { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); text-align: center; }
 .ab-stat { padding: 34px 0 34px 26px; position: relative; display: flex; flex-direction: column; gap: 6px; }
 .ab-stat:not(:nth-child(4n+1))::before {
   content: ""; position: absolute; left: 0; top: 50%; height: 40px; transform: translateY(-50%);
