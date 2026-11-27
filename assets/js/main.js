@@ -1476,3 +1476,53 @@
     init();
   }
 })();
+
+/* ==========================================================================
+   SITE-WIDE ALIGNMENT — runs on every page. Reads the real header box and gives
+   each full-width content block the side padding it needs so its left/right
+   edges land exactly on the header's. Needs the matching rules at the end of layout.css.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var page = document.querySelector('.homepage');
+  if (!page) return;
+
+  // blocks that carry their own side padding (same list the shared layout uses)
+  var PADDED = [
+    '.layout-container-lg', '.group-9', '.group-73', '.group-77', '.group-84', '.group-103',
+    '.group-110', '.group-136', '.group-150', '.testimonials-section', '.faq-section',
+    '.group-191', '.group-218'
+  ].join(',');
+  var queued = false;
+
+  function align() {
+    queued = false;
+    var header = page.querySelector('.group-25');
+    if (!header) return;
+    var h = header.getBoundingClientRect();
+    var vw = document.documentElement.clientWidth;
+
+    // document order = outer blocks first, so nested blocks are measured after their parent
+    Array.prototype.forEach.call(page.querySelectorAll(PADDED), function (el) {
+      var r = el.getBoundingClientRect();
+      // only true full-bleed blocks (start at the left edge, end at the right edge);
+      // anything intentionally narrower or offset is left exactly as designed
+      if (r.left > 1 || r.right < vw - 1) return;
+      el.style.setProperty('padding-left',  Math.max(0, Math.round(h.left  - r.left))  + 'px', 'important');
+      el.style.setProperty('padding-right', Math.max(0, Math.round(r.right - h.right)) + 'px', 'important');
+    });
+
+    // footer decoration is positioned from var(--gutter) on the left
+    var footer = page.querySelector('.homepage-footer');
+    if (footer) {
+      var f = footer.getBoundingClientRect();
+      footer.style.setProperty('--gutter', Math.max(0, Math.round(h.left - f.left)) + 'px');
+    }
+  }
+  function queue() { if (!queued) { queued = true; requestAnimationFrame(align); } }
+
+  align();
+  window.addEventListener('resize', queue, { passive: true });
+  window.addEventListener('load', queue);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(queue);
+})();

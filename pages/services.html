@@ -1,106 +1,843 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Services | Whizcamp LLC</title>
-    <link rel="stylesheet" href="../assets/css/globals.css" />
-    <link rel="stylesheet" href="../assets/css/pages/page.css" />
-  </head>
-  <body>
-    <!-- Site Header -->
-    <header class="site-header">
-      <div class="header-container">
-        <a href="../index.html" class="site-logo">
-          <img src="../assets/icons/vector-16.svg" alt="Whizcamp Logo" />
-          <span>WHIZCAMP</span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technology Services | Whizcamp — Build, Protect, and Grow Your Business</title>
+  <meta name="description" content="Whizcamp's technology services: AI & machine learning, app and website development, cyber security, digital marketing, DevOps & cloud, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="../assets/images/rectangle-25017.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="../assets/css/globals.css" />
+  <link rel="stylesheet" href="../assets/css/home.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/mega-menu.css" />
+  <link rel="stylesheet" href="../assets/css/pages/Services.css" />
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ab-ne" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ab-right" viewBox="0 0 24 24"><path d="M4 12h15m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="ic-plan" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></symbol>
+<symbol id="ic-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="ic-network" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/></symbol>
+<symbol id="ic-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></symbol>
+<symbol id="ic-mega" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+<symbol id="ic-hire" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M2 21a8 8 0 0 1 10.4-7.6"/><circle cx="18" cy="18" r="3"/><path d="m22 22-1.9-1.9"/></symbol>
+<symbol id="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+<symbol id="ic-owner" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 11l2 2 4-4"/></symbol>
+<symbol id="ic-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+<symbol id="ic-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1.2 1.2C7.8 18.7 7 20.2 7 22M14 14.7V17c0 .6.5 1 1.2 1.2 1 .5 1.8 2 1.8 3.8M18 2H6v7a6 6 0 0 0 12 0V2z"/></symbol>
+<symbol id="ic-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1"/><circle cx="15.5" cy="8.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="8.5" cy="15.5" r="1"/><circle cx="15.5" cy="15.5" r="1"/></symbol>
+<symbol id="ic-spark" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 3v4M17 5h4M5 17v4M3 19h4"/></symbol>
+<symbol id="ic-growth" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+</svg>
+  <div class="responsive-stage">
+    <div class="homepage about-page services-page">
+      <div class="announcement-ticker">
+        <div class="announcement-ticker__viewport">
+          <div class="announcement-ticker__track">
+            <p class="free-AI-readiness">
+              <span class="text-wrapper">Free AI Readiness Assessment</span>
+              <span class="span">
+                - Find Out If Your Business Is AI-Ready in 30 Min -
+              </span>
+              <span class="text-wrapper-2">Start Free</span>
+            </p>
+            <img class="vector" src="../assets/icons/vector-1.svg" alt="" />
+            <p class="p">
+              <span class="span">Enjoy </span>
+              <span class="text-wrapper-3">1 Week FREE Trial</span>
+              <span class="span"> &amp; 45 Days Post-Launch Support - </span>
+              <span class="text-wrapper-2">Claim Now</span>
+            </p>
+            <img class="vector" src="../assets/icons/vector-1.svg" alt="" />
+            <p class="p">
+              <span class="text-wrapper-3">Limited Slots</span>
+              <span class="span">
+                : Only 3 New Client Projects This Month -
+              </span>
+              <span class="text-wrapper-2">Book Your Call</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="group-25">
+        <div class="group-26">
+          <img class="group-27" src="../assets/images/whizcamp-llc-logo-header.png" alt="Whizcamp LLC logo" />
+          <div class="group-28">
+            <div class="group-29">
+              <div class="rectangle-6"></div>
+              <div class="text-wrapper-10">Book Consultation</div>
+            </div>
+            <img class="group-30" src="../assets/images/book-consultation-header-button-arrow-icon-gradient.png" alt="" />
+          </div>
+          <div class="frame-10">
+            <div class="text-wrapper-25">About</div>
+            <div class="ellipse"></div>
+            <div class="group-31">
+              <div class="text-wrapper-26">Services</div>
+              <img class="frame-11" src="../assets/icons/frame-31.svg" alt="" />
+            </div>
+            <div class="ellipse"></div>
+            <div class="group-32">
+              <div class="text-wrapper-26">Work</div>
+              <img class="frame-12" src="../assets/icons/frame-31.svg" alt="" />
+            </div>
+            <div class="ellipse"></div>
+            <div class="text-wrapper-25">Industries</div>
+            <div class="ellipse"></div>
+            <div class="group-33">
+              <div class="text-wrapper-26">Products</div>
+              <img class="frame-13" src="../assets/icons/frame-31.svg" alt="" />
+            </div>
+            <div class="ellipse"></div>
+            <div class="text-wrapper-25">Insights</div>
+          </div>
+
+          <!-- ============================================================
+               MEGA MENUS (Services / Work / Products)
+               ============================================================ -->
+          <div class="mm-root" data-mm-root>
+            <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+              <symbol id="mm-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+              <symbol id="mm-arrow-ne" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+            </svg>
+
+            <div class="mm-stage">
+
+              <!-- ===================== SERVICES ===================== -->
+    <div class="mm-panel mm-panel--services" id="mm-services" data-mm-panel="services" role="region" aria-label="Services">
+      <div class="mm-main">
+        <div class="mm-label">Our Services</div>
+        <div class="mm-cols">
+          <div class="mm-col">
+            <h3 class="mm-colhead">Build &amp; Scale</h3>
+            <ul class="mm-list">
+              <li><a href="#" class="is-active">AI &amp; Machine Learning<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+              <li><a href="#">App Development Services<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+              <li><a href="#">Website Development<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+              <li><a href="#">IT Staff Augmentation<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+            </ul>
+            <a href="#" class="mm-cta">
+              <div class="mm-cta__text">
+                <strong>Have a Complex Business Challenge?</strong>
+                <span>Let's build scalable solutions that drive measurable business growth.</span>
+                <em>Schedule a Consultation <svg class="mm-ico"><use href="#mm-arrow-ne"/></svg></em>
+              </div>
+              <svg class="mm-cta__art" viewBox="0 0 120 96" aria-hidden="true">
+                <rect x="6" y="26" width="84" height="58" rx="7" fill="#fff"/>
+                <path d="M6 33a7 7 0 0 1 7-7h70a7 7 0 0 1 7 7v4H6z" fill="#1f4f9c"/>
+                <circle cx="15" cy="31.5" r="1.8" fill="#fff"/><circle cx="21" cy="31.5" r="1.8" fill="#fff"/><circle cx="27" cy="31.5" r="1.8" fill="#fff"/>
+                <rect x="14" y="44" width="22" height="16" rx="3" fill="#cfe0f7"/>
+                <rect x="42" y="45" width="40" height="4" rx="2" fill="#9db9e3"/><rect x="42" y="54" width="30" height="4" rx="2" fill="#cfe0f7"/>
+                <rect x="14" y="66" width="68" height="4" rx="2" fill="#cfe0f7"/>
+                <circle cx="82" cy="66" r="13" fill="#fff" fill-opacity=".55" stroke="#1f4f9c" stroke-width="5"/>
+                <path d="m92 76 14 13" stroke="#1f4f9c" stroke-width="7" stroke-linecap="round"/>
+                <circle cx="86" cy="20" r="11" fill="#f5b800"/>
+                <text x="86" y="25" text-anchor="middle" font-size="15" font-weight="700" fill="#1b2a4a" font-family="DM Sans, sans-serif">?</text>
+              </svg>
+            </a>
+          </div>
+          <div class="mm-col mm-col--divided">
+            <h3 class="mm-colhead">Protect &amp; Grow</h3>
+            <ul class="mm-list">
+              <li><a href="#" class="is-active">Cyber Security<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+              <li><a href="#">Digital Marketing<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+              <li><a href="#">DevOps &amp; Clouds<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+              <li><a href="#">DTC &amp; CRO Services<svg class="mm-ico"><use href="#mm-arrow-right"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <aside class="mm-feature mm-feature--cream">
+        <div class="mm-label">Featured Insight</div>
+        <img class="mm-feature__img" src="../assets/images/featured-insight-cybersecurity-security-operations-dashboard.jpg" alt="Security analyst monitoring cybersecurity dashboards on multiple screens" loading="lazy" decoding="async">
+        <h4>Cybersecurity as a Strategic Imperative for Modern Enterprises</h4>
+        <p>Modern enterprises operate within complex digital ecosystems, making secure infrastructure…</p>
+        <a href="#" class="mm-feature__link">Read Article <svg class="mm-ico"><use href="#mm-arrow-ne"/></svg></a>
+      </aside>
+    </div>
+
+    <!-- ===================== WORK ===================== -->
+    <div class="mm-panel mm-panel--work" id="mm-work" data-mm-panel="work" role="region" aria-label="Work">
+      <div class="mm-main">
+        <div class="mm-label">Our Work</div>
+        <div class="mm-cols">
+          <div class="mm-col">
+            <a href="#" class="mm-work">
+              <img src="../assets/images/mumshandmade-brand-logo-work-menu.png" alt="MumsHandMade handmade products brand logo" loading="lazy" decoding="async">
+              <div><h4>MumsHandMade</h4><p>Whizcamp partnered with Mumshandmade to optimize its eCommerce experience.</p></div>
+            </a>
+            <a href="#" class="mm-work">
+              <img src="../assets/images/kingpool-sports-pool-app-logo-work-menu.png" alt="KingPool sports pool app logo" loading="lazy" decoding="async">
+              <div><h4>KingPool</h4><p>Kingpool is a smart sports platform connecting fans through competition and engagement.</p></div>
+            </a>
+            <a href="#" class="mm-work">
+              <img src="../assets/images/kaire-ai-healthcare-app-logo-work-menu.png" alt="KaireAI healthcare caregiver app logo" loading="lazy" decoding="async">
+              <div><h4>KaireAI</h4><p>From daily checkups to emergency alerts, Kaire keeps seniors safe and families connected.</p></div>
+            </a>
+          </div>
+          <div class="mm-col mm-col--divided">
+            <a href="#" class="mm-work">
+              <img src="../assets/images/epiceats-food-brand-logo-work-menu.png" alt="EpicEats food brand logo" loading="lazy" decoding="async">
+              <div><h4>EpicEats</h4><p>Epic Eats is a modern food ordering and delivery app built around a love for great food and everyday convenience.</p></div>
+            </a>
+            <a href="#" class="mm-work">
+              <img src="../assets/images/mastercook-recipe-manager-logo-work-menu.png" alt="MasterCook recipe manager app logo" loading="lazy" decoding="async">
+              <div><h4>Mastercook</h4><p>MasterCook has been a trusted name in recipe management for over two decades.</p></div>
+            </a>
+            <a href="#" class="mm-work">
+              <img src="../assets/images/giu-team-connect-sports-scheduling-logo-work-menu.png" alt="GIU Team Connect sports scheduling app logo" loading="lazy" decoding="async">
+              <div><h4>GIU</h4><p>GIU simplifies sports management, scheduling, and team coordination.</p></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <aside class="mm-feature mm-feature--blue">
+        <div class="mm-label">Featured Insight</div>
+        <img class="mm-feature__img" src="../assets/images/featured-insight-strategic-web-application-development-laptop.jpg" alt="Laptop showing a web application dashboard with scalability and user experience icons" loading="lazy" decoding="async">
+        <h4>Why Strategic Web Application Development Matters</h4>
+        <p>In today’s digital economy, enterprise success depends on scalable technology, seamless…</p>
+        <a href="#" class="mm-feature__link">Read Article <svg class="mm-ico"><use href="#mm-arrow-ne"/></svg></a>
+      </aside>
+    </div>
+
+    <!-- ===================== PRODUCTS ===================== -->
+    <div class="mm-panel mm-panel--products" id="mm-products" data-mm-panel="products" role="region" aria-label="Products">
+      <div class="mm-intro">
+        <div class="mm-label mm-label--bar">Our Products</div>
+        <h3>Innovative Products Built by Whizcamp</h3>
+        <p>Real-world solutions designed, built, and scaled in-house to solve meaningful problems.</p>
+        <img class="mm-intro__art" src="../assets/images/whizcamp-in-house-products-web-and-cloud-app-illustration.png" alt="Illustration of web and cloud applications representing products built by Whizcamp" loading="lazy" decoding="async">
+      </div>
+      <div class="mm-main">
+        <div class="mm-prodhead">
+          <div class="mm-label mm-label--bar">In-House Products</div>
+          <span class="mm-badge">• Live &amp; Open for Beta</span>
+        </div>
+        <a href="#" class="mm-product">
+          <img src="../assets/images/technbuddy-professional-networking-platform-logo.png" alt="techNbuddy professional networking platform logo" loading="lazy" decoding="async">
+          <div class="mm-product__text">
+            <h4>techNbuddy <span class="mm-pill">• Live</span></h4>
+            <strong>Connect with Confidence</strong>
+            <p>AI-powered communication assistant that helps you connect smarter.</p>
+          </div>
+          <span class="mm-product__go">Explore <svg class="mm-ico"><use href="#mm-arrow-ne"/></svg></span>
         </a>
-        <nav class="site-nav">
-          <a href="../index.html">Home</a>
-          <a href="services.html" class="active">Services</a>
-          <a href="about.html">About</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a href="contact.html" class="btn-consultation">
-          Book Consultation
+        <a href="#" class="mm-product">
+          <img src="../assets/images/kitchenpocket-recipe-management-app-logo.png" alt="KitchenPocket recipe management app logo" loading="lazy" decoding="async">
+          <div class="mm-product__text">
+            <h4>KitchenPocket <span class="mm-pill">• Live</span></h4>
+            <strong>Your Recipe. Your Data. Your Earning.</strong>
+            <p>Smart recipe management and earning insights all in your pocket.</p>
+          </div>
+          <span class="mm-product__go">Explore <svg class="mm-ico"><use href="#mm-arrow-ne"/></svg></span>
         </a>
+        <div class="mm-prodfoot"><span>Powered by Whizcamp LLC</span><i></i><span>Austin, TX</span><i></i><span>Now Accepting Beta Users</span></div>
       </div>
-    </header>
+      <aside class="mm-feature mm-feature--blue">
+        <div class="mm-label">Whizcamp Ventures</div>
+        <img class="mm-feature__img" src="../assets/images/whizcamp-ventures-team-collaborating-on-laptops.jpg" alt="Whizcamp Ventures team collaborating on laptops in the office" loading="lazy" decoding="async">
+        <h4>Engineering Products. Driving Innovation. Creating Business Impact.</h4>
+        <p>Beyond client engagements, Whizcamp invests in building and scaling proprietary technology solutions.</p>
+        <a href="#" class="mm-feature__link">Explore Our Ventures <svg class="mm-ico"><use href="#mm-arrow-ne"/></svg></a>
+      </aside>
+    </div>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="page-hero-container">
-        <span class="page-badge">[OUR CAPABILITIES]</span>
-        <h1 class="page-title">Next-Gen Technology &amp; Engineering Services</h1>
-        <p class="page-subtitle">
-          From AI development to cloud architecture and mobile apps, Whizcamp delivers scalable,
-          ROI-focused software solutions built for business growth.
-        </p>
-      </div>
-    </section>
+            </div>
+          </div>
+          <!-- ================= /MEGA MENUS ================= -->
 
-    <!-- Main Content -->
-    <main class="page-content">
-      <div class="content-grid">
-        <div class="content-card">
-          <h3>01. AI &amp; ML Development</h3>
-          <p>Build intelligent solutions that automate processes, improve efficiency, and help businesses make smarter decisions.</p>
-        </div>
-        <div class="content-card">
-          <h3>02. Cyber Security</h3>
-          <p>Protect sensitive corporate and user assets with modern encryption, threat detection, and penetration testing.</p>
-        </div>
-        <div class="content-card">
-          <h3>03. Mobile App Development</h3>
-          <p>Deliver high-performance cross-platform iOS and Android experiences engineered for speed and conversion.</p>
-        </div>
-        <div class="content-card">
-          <h3>04. Web Development</h3>
-          <p>Design and build enterprise web applications with responsive design, fluid interactions, and high reliability.</p>
-        </div>
-        <div class="content-card">
-          <h3>05. DevOps &amp; Cloud</h3>
-          <p>Scale effortlessly on AWS, GCP, or Azure with robust CI/CD pipelines, Kubernetes, and automated monitoring.</p>
-        </div>
-        <div class="content-card">
-          <h3>06. IT Staff Augmentation</h3>
-          <p>Empower your existing product team with vetted senior engineers, AI researchers, and solutions architects.</p>
         </div>
       </div>
-    </main>
 
-    <!-- Site Footer -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div>
-          <h3>WHIZCAMP</h3>
-          <p>We empower businesses to scale digitally through innovation, strategy, and smart development.</p>
+      <section class="ab-hero sv-hero" aria-labelledby="sv-title">
+        <div class="layout-container-lg ab-hero__inner">
+          <h1 class="ab-hero__title" id="sv-title">
+            <span class="ab-hero__line ab-hero__line--lead"><span>Technology Services</span></span>
+            <span class="ab-hero__line ab-hero__line--sub"><span>To <b>Build, Protect,</b> and</span></span>
+            <span class="ab-hero__line ab-hero__line--sub"><span><b>Grow</b> Your Business</span></span>
+          </h1>
         </div>
-        <div>
-          <h4>Services</h4>
-          <p><a href="services.html">AI &amp; ML Development</a></p>
-          <p><a href="services.html">Web Development</a></p>
-          <p><a href="services.html">Cloud &amp; DevOps</a></p>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="blog.html">Blog</a></p>
-          <p><a href="contact.html">Contact</a></p>
-        </div>
-        <div>
-          <h4>Location</h4>
-          <p>1980, 701 Tillery Street Unit 12, Austin, TX, Travis, US, 78702</p>
-          <p>info@whizcamp.tech</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>Copyright &copy; 2026 Whizcamp LLC. All rights reserved.</span>
-        <span>Privacy Policy &bull; Terms &amp; Conditions</span>
-      </div>
-    </footer>
+      </section>
 
-    <script src="../assets/js/main.js"></script>
-  </body>
+      <div class="after-case-studies">
+        <section class="ab-section ab-section--light" style="padding-top:88px">
+          <div class="layout-container-lg">
+            <div class="sv-intro">
+              <div class="ab-eyebrow">[OUR SERVICES]</div>
+              <div>
+                <p class="ab-who__text"><strong>A team bringing its first app to market. A retailer making checkout easier. A growing business keeping customer data secure. We work alongside teams like these to build products, protect the systems they rely on, and reach more customers.</strong></p>
+                <div class="ab-stats-inline">
+                  <div class="ab-stat-inline"><span>Projects delivered</span><b data-count>4.1K+</b></div>
+                  <div class="ab-stat-inline"><span>Hustlers under one roof</span><b data-count>35+</b></div>
+                  <div class="ab-stat-inline"><span>Funds raised for startups</span><b data-count>$9m</b></div>
+                  <div class="ab-stat-inline"><span>Years of excellence</span><b data-count>8+</b></div>
+                </div>
+              </div>
+            </div>
+            <hr class="ab-rule" style="margin-top:56px">
+          </div>
+        </section>
+
+        <section class="ab-section ab-section--light" id="services" style="padding-block:40px 110px">
+          <div class="layout-container-lg">
+            <div class="sv-filters" role="group" aria-label="Filter services"><button class="sv-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button><button class="sv-chip" type="button" data-filter="build" aria-pressed="false">Build &amp; Scale</button><button class="sv-chip" type="button" data-filter="protect" aria-pressed="false">Protect &amp; Grow</button></div>
+            <div class="sv-list" data-sv-list>
+<article class="sv-row" id="ai" data-group="build" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/ai-brain-visualization-on-monitor-machine-learning.jpg" alt="AI &amp; Machine Learning: AI brain visualization on a monitor showing a machine learning model" loading="eager"><img class="" data-i="1" src="../assets/images/ai-ml-developer-working-on-neural-network-workstation.jpg" alt="AI &amp; Machine Learning: AI and machine learning developer working on a neural network visualization at a dual-monitor workstation" loading="lazy"><img class="" data-i="2" src="../assets/images/choosing-right-web-application-development-company-blog.webp" alt="AI &amp; Machine Learning: Developer working at a laptop with code on screen" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>AI &amp; Machine Learning</h3>
+    <p class="sv-row__desc">Put your business data to work. Use it to forecast demand, spot patterns, and automate decisions your team makes repeatedly.</p>
+    <div class="sv-tags"><span class="sv-tag">Predictive Analytics</span><span class="sv-tag">AI integration</span><span class="sv-tag">Workflow automation</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-ai-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-ai-0" role="region"><div><p>We turn the data you already have into models and automations that forecast, classify, and recommend, then connect them to the tools your team uses every day.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-ai-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-ai-1" role="region"><div><p>Demand forecasting, document and email triage, customer-support assistants, anomaly detection, and personalized recommendations.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-ai-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-ai-2" role="region"><div><p>We start with one measurable use case, prove it on a small scale, then deploy and monitor it so the results hold up in production.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#ai"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="app" data-group="build" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/mobile-app-wireframe-design-ui-ux-sketching.jpg" alt="App Development Services: Mobile app wireframe design sketches for UI and UX planning" loading="lazy"><img class="" data-i="1" src="../assets/images/mobile-app-dashboard-analytics-interface-on-smartphone.jpg" alt="App Development Services: Mobile app analytics dashboard interface displayed on a smartphone" loading="lazy"><img class="" data-i="2" src="../assets/images/kaire-ai-iot-healthcare-caregiver-app-case-study.webp" alt="App Development Services: KaireAI healthcare caregiver mobile app preview" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>App Development Services</h3>
+    <p class="sv-row__desc">Give customers a mobile app that makes their most important tasks easy, from their first sign-in to the actions they take every day.</p>
+    <div class="sv-tags"><span class="sv-tag">Mobile App Development</span><span class="sv-tag">App maintenance &amp; improvement</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-app-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-app-0" role="region"><div><p>We design, build, and launch iOS and Android apps, and keep improving them after release with fixes, new features, and performance work.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-app-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-app-1" role="region"><div><p>Customer apps, member portals, booking and ordering flows, field-team tools, and companion apps for connected devices.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-app-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-app-2" role="region"><div><p>Short design sprints, working builds every couple of weeks, and a launch plan that covers testing, store release, and support.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#app"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="web" data-group="build" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/website-wireframe-planning-ui-design-workspace.jpg" alt="Website Development: Website wireframe planning at a UI design workspace" loading="lazy"><img class="" data-i="1" src="../assets/images/website-development-code-on-desktop-monitor.jpg" alt="Website Development: Website development source code on a desktop monitor" loading="lazy"><img class="" data-i="2" src="../assets/images/featured-insight-strategic-web-application-development-laptop.jpg" alt="Website Development: Laptop showing a web application dashboard" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>Website Development</h3>
+    <p class="sv-row__desc">Build a fast, responsive website that helps visitors understand your offer and take the next step on your terms.</p>
+    <div class="sv-tags"><span class="sv-tag">CMS integration</span><span class="sv-tag">Performance &amp; Accessibility</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-web-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-web-0" role="region"><div><p>We build marketing sites, web apps, and storefronts that load quickly, work on any screen, and are easy for your team to update.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-web-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-web-1" role="region"><div><p>Company sites, landing pages, eCommerce stores, customer dashboards, and content-managed publishing.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-web-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-web-2" role="region"><div><p>We agree on goals and structure first, design and build in stages, and finish with performance, accessibility, and SEO checks.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#web"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="staff" data-group="build" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/whizcamp-custom-ai-product-engineering-team-case-study.webp" alt="IT Staff Augmentation: Whizcamp team in a workshop discussing solutions" loading="lazy"><img class="" data-i="1" src="../assets/images/quality-reliable-solutions-building-blocks-whizcamp-mug.webp" alt="IT Staff Augmentation: Building blocks representing reliable, high-quality solutions" loading="lazy"><img class="" data-i="2" src="../assets/images/whizcamp-engineer-working-on-laptop-in-tech-workspace.webp" alt="IT Staff Augmentation: Engineer working on a laptop in a modern technology workspace" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>IT Staff Augmentation</h3>
+    <p class="sv-row__desc">Add the skills your team needs for an upcoming release, a specialist task, or a longer development engagement.</p>
+    <div class="sv-tags"><span class="sv-tag">Specialist Support</span><span class="sv-tag">Team expansion</span><span class="sv-tag">Dedicated developers</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-staff-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-staff-0" role="region"><div><p>We place vetted engineers, designers, and QA specialists who join your team, follow your process, and ship alongside you.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-staff-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-staff-1" role="region"><div><p>Covering a launch deadline, adding a rare skill, scaling a team quickly, or running a dedicated product pod.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-staff-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-staff-2" role="region"><div><p>You describe the roles, we match and introduce candidates within days, and you scale the team up or down as needs change.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#staff"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="cyber" data-group="protect" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/cyber-security-operations-team-monitoring-threat-dashboards.jpg" alt="Cyber security: Cyber security operations team monitoring threat dashboards" loading="lazy"><img class="" data-i="1" src="../assets/images/secure-access-granted-cyber-security-laptop-login.jpg" alt="Cyber security: Secure access granted message on a laptop showing cyber security protection" loading="lazy"><img class="" data-i="2" src="../assets/images/featured-insight-cybersecurity-security-operations-dashboard.jpg" alt="Cyber security: Security analyst monitoring cybersecurity dashboards on multiple screens" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>Cyber security</h3>
+    <p class="sv-row__desc">Understand where your systems are exposed, prioritize the risks, and give your team a clear plan to reduce them.</p>
+    <div class="sv-tags"><span class="sv-tag">Security assessments</span><span class="sv-tag">Risk prioritization</span><span class="sv-tag">Ongoing monitoring</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-cyber-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-cyber-0" role="region"><div><p>We review your applications, infrastructure, and access, then fix what matters most and set up monitoring so new issues surface early.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-cyber-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-cyber-1" role="region"><div><p>Pre-launch security reviews, compliance preparation, penetration testing, access clean-up, and incident readiness.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-cyber-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-cyber-2" role="region"><div><p>Assess, rank findings by real risk, remediate with your team, and re-test so you can see what changed.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#cyber"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="marketing" data-group="protect" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/digital-marketing-strategy-planning-desk-laptop.jpg" alt="Digital Marketing: Digital marketing strategy planning on a desk with laptop and sketched growth charts" loading="lazy"><img class="" data-i="1" src="../assets/images/digital-marketing-analytics-dashboard-on-laptop.jpg" alt="Digital Marketing: Digital marketing analytics dashboard on a laptop screen" loading="lazy"><img class="" data-i="2" src="../assets/images/faster-software-delivery-business-impact-laptop-growth-chart.webp" alt="Digital Marketing: Developer using a laptop with a growth chart" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>Digital Marketing</h3>
+    <p class="sv-row__desc">Reach customers through search, content, and campaigns, then see which efforts bring in qualified leads and sales.</p>
+    <div class="sv-tags"><span class="sv-tag">SEO &amp; Content</span><span class="sv-tag">Paid campaigns</span><span class="sv-tag">Analytics</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-marketing-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-marketing-0" role="region"><div><p>We plan and run search, content, email, and paid campaigns, with tracking in place so every effort ties back to results.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-marketing-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-marketing-1" role="region"><div><p>Launching a new product, growing organic traffic, lead generation for service businesses, and re-engaging past customers.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-marketing-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-marketing-2" role="region"><div><p>Set goals and tracking, test a focused set of channels, double down on what works, and report in plain language.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#marketing"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="devops" data-group="protect" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/devops-engineer-coding-cloud-infrastructure.jpg" alt="DevOps &amp; Clouds: DevOps engineer coding cloud infrastructure behind a transparent code display" loading="lazy"><img class="" data-i="1" src="../assets/images/cloud-computing-upload-concept-devops.jpg" alt="DevOps &amp; Clouds: Cloud computing and DevOps concept with a hand touching a glowing cloud upload icon" loading="lazy"><img class="" data-i="2" src="../assets/images/cybersecurity-services-essential-for-modern-businesses-blog.webp" alt="DevOps &amp; Clouds: Engineers monitoring systems on multiple screens" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>DevOps &amp; Clouds</h3>
+    <p class="sv-row__desc">Make releases more predictable with automated deployments, cloud setups that scale, and systems that stay running.</p>
+    <div class="sv-tags"><span class="sv-tag">CI/CD pipelines</span><span class="sv-tag">Cloud migration</span><span class="sv-tag">Monitoring</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-devops-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-devops-0" role="region"><div><p>We automate builds, testing, and deployment, set up reliable cloud infrastructure, and add monitoring that tells you early when something is off.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-devops-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-devops-1" role="region"><div><p>Moving to the cloud, cutting release time, reducing outages, controlling cloud costs, and preparing for traffic spikes.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-devops-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-devops-2" role="region"><div><p>Review the current setup, automate the slowest steps first, then harden, document, and hand over runbooks your team can use.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#devops"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+<article class="sv-row" id="dtc" data-group="protect" data-reveal>
+  <div class="sv-row__media"><img class="is-active" data-i="0" src="../assets/images/Finance.jpg" alt="DTC &amp; CRO Services: Business team in a meeting room watching a stock market chart presentation" loading="lazy"><img class="" data-i="1" src="../assets/images/RetailECommerce.jpg" alt="DTC &amp; CRO Services: Fashion retail store with a smart digital display for retail and e-commerce" loading="lazy"><img class="" data-i="2" src="../assets/images/giu-team-connect-game-scheduling-app-case-study.webp" alt="DTC &amp; CRO Services: GIU Team Connect mobile app preview" loading="lazy"></div>
+  <div class="sv-row__body">
+    <h3>DTC &amp; CRO Services</h3>
+    <p class="sv-row__desc">Help more shoppers move from product discovery to checkout by finding friction and testing improvements systematically.</p>
+    <div class="sv-tags"><span class="sv-tag">Storefront Optimization</span><span class="sv-tag">Conversion audits</span><span class="sv-tag">A/B testing</span></div>
+    <ul class="sv-acc"><li class="sv-acc__item is-open" data-i="0"><button class="sv-acc__row" type="button" aria-expanded="true" aria-controls="sv-dtc-0"><span>What We Do?</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-dtc-0" role="region"><div><p>We audit your storefront and checkout, find where shoppers drop off, and run structured tests to lift conversion and order value.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="1"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-dtc-1"><span>Typical Use Cases</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-dtc-1" role="region"><div><p>Direct-to-consumer brands, Shopify and custom stores, high cart abandonment, and weak product-page performance.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li><li class="sv-acc__item" data-i="2"><button class="sv-acc__row" type="button" aria-expanded="false" aria-controls="sv-dtc-2"><span>How We Work</span><img class="sv-acc__arrow" src="../assets/images/Services/services-accordion-arrow-gradient-icon.png" alt="" width="22" height="16"></button><div class="sv-acc__panel" id="sv-dtc-2" role="region"><div><p>Audit, prioritize ideas by impact, test one change at a time, and roll out the winners with results you can verify.</p></div></div><span class="sv-acc__progress" aria-hidden="true"></span></li></ul>
+    <a class="ab-btn ab-btn--sv" href="#dtc"><span class="ab-btn__label">Explore Service</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a>
+  </div>
+</article>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="ab-band ab-pad" aria-labelledby="sv-cta">
+          <div class="layout-container-lg ab-wrap">
+            <h2 class="ab-h2" id="sv-cta">What Are You <em>Working On?</em></h2>
+            <p class="ab-lede">Tell us what you’re building or where you’re stuck. We’ll help you find the right next step.</p>
+            <div class="ab-btn-row" style="margin-top:32px"><a class="ab-btn ab-btn--outline" href="#contact"><span class="ab-btn__label">Discuss Your Project</span><span class="ab-btn__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-ne"/></svg></span></a></div>
+          </div>
+        </section>
+
+        <section class="ab-section ab-glow-dark ab-pad">
+          <div class="layout-container-lg">
+            <div class="ab-head" style="margin-bottom:44px;align-items:center">
+              <h2 class="ab-h2"><em>Featured</em> Work</h2>
+              <p class="ab-lede" style="max-width:340px;text-align:right;padding-top:0">A look at what we have built with our clients.</p>
+            </div>
+            <div class="sv-work" data-reveal-group><article class="sv-work__card" data-reveal><div class="sv-work__media" data-name="Kaire" style="--tile:#dfe6f6"><img src="../assets/images/kaire-ai-iot-healthcare-caregiver-app-case-study.webp" alt="KaireAI IoT-enabled healthcare caregiver web and mobile app case study" loading="lazy"></div><h3>Kaire</h3><p>KaireAI is designed to redefine how we care at home. Using facial scanning, smart sensors, and predictive models, it delivers real-time health updates and care reminders all from one intuitive dashboard.</p><a class="ab-link" href="#">Explore Case Study<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-ne"/></svg></a></article><article class="sv-work__card" data-reveal><div class="sv-work__media" data-name="Expenzia" style="--tile:#3b2f55"></div><h3>Expenzia</h3><p>Expenzia is designed to make personal finance feel simple. Budgets, recurring payments, and spending categories come together in one clear dashboard so you always know where your money is going.</p><a class="ab-link" href="#">Explore Case Study<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-ne"/></svg></a></article></div>
+            <div class="ab-btn-row"><a class="ab-btn ab-btn--light" href="success-stories.html"><span class="ab-btn__label">View More Case Study</span><span class="ab-btn__ico"><img src="../assets/images/Services/services-cta-arrow-white-icon.png" alt="" width="22" height="22"></span></a></div>
+          </div>
+        </section>
+
+        <div class="testimonials-section wc-testimonials" id="testimonials">
+
+          <!-- HEADER -->
+          <div class="wc-testimonials__head">
+            <div class="wc-testimonials__titles">
+              <div class="wc-testimonials__eyebrow">[TESTIMONIALS]</div>
+              <h2 class="wc-testimonials__title">See How <em>We’ve Made An Impact</em></h2>
+            </div>
+            <p class="wc-testimonials__lead">
+              Building trust is essential. Our client testimonials showcase the
+              positive results we deliver and the strong partnerships we build.
+            </p>
+          </div>
+
+          <!-- 3-COLUMN ROW -->
+          <div class="wc-testimonials__row">
+
+            <!-- COL 1: dark stats card (static) -->
+            <aside class="wc-testimonials__stats">
+              <div class="wc-testimonials__stats-top">
+                <div>
+                  <div class="wc-testimonials__stats-label">Client Rating</div>
+                  <div class="wc-testimonials__score">4.9<span>/5</span></div>
+                </div>
+                <img class="wc-testimonials__badge" src="../assets/images/whizcamp-tech-mission-vision-values-circular-badge.png"
+                  alt="Tech · Mission · Vision · Values" />
+              </div>
+
+              <p class="wc-testimonials__stats-copy">
+                Trusted by founders, creators, and ambitious brands worldwide.
+                Every project is built with intention &amp; crafted with care.
+              </p>
+
+              <div class="wc-testimonials__stats-foot">
+                <div class="wc-testimonials__avatars">
+                  <img loading="lazy" decoding="async" src="../assets/images/whizcamp-client-avatar-1.webp" alt="Whizcamp client avatar" />
+                  <img loading="lazy" decoding="async" src="../assets/images/whizcamp-client-avatar-2.webp" alt="Whizcamp client portrait" />
+                  <img loading="lazy" decoding="async" src="../assets/images/whizcamp-client-avatar-3.webp" alt="Whizcamp client portrait" />
+                  <img loading="lazy" decoding="async" src="../assets/images/whizcamp-client-avatar-4.webp" alt="Whizcamp client portrait" />
+                </div>
+                <div class="wc-testimonials__trusted">Trusted by Worldwide</div>
+                <div class="wc-testimonials__stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" />
+                  </svg>
+                </div>
+              </div>
+            </aside>
+
+            <!-- COL 2 + COL 3: filled by testimonials.js from the data below -->
+            <div class="wc-testimonials__column wc-testimonials__column--primary" data-testimonial-column="primary"
+              aria-live="polite"></div>
+            <div class="wc-testimonials__column wc-testimonials__column--secondary" data-testimonial-column="secondary"
+              aria-live="polite"></div>
+          </div>
+
+          <!-- NAV ARROWS -->
+          <div class="wc-testimonials__nav">
+            <button type="button" class="wc-testimonials__button wc-testimonials__button--prev" data-testimonial-prev
+              aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5m0 0l6-6m-6 6l6 6" />
+              </svg>
+            </button>
+            <button type="button" class="wc-testimonials__button wc-testimonials__button--next" data-testimonial-next
+              aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- TESTIMONIAL DATA — add more objects here and the arrows will cycle through all of them.
+       "full" is what shows after clicking Read More (leave it out for short quotes with no Read More). -->
+          <script type="application/json" id="testimonials-data">
+  [
+    {
+      "name": "Matt Lobel",
+      "role": "Founder & CEO, Deep Sleep",
+      "photo": "../assets/images/matt-lobel-deep-sleep-founder-testimonial-photo.webp",
+      "text": "Deep Sleep has completely changed how I approach my health and daily routine. Having sleep, workouts, and nutrition in one place makes everything simple and easy to manage. The insights are clear, actionable, and actually help me improve day by day."
+    },
+    {
+      "name": "Steve Perrin",
+      "role": "Founder & CEO, Epic Eats",
+      "photo": "../assets/images/whizcamp-co-founder-cto-portrait.webp",
+      "text": "With over two years of working development of my organization, Whizcamp and their team of software developers have proven to be a star for my development needs. They have worked around the clock to deliver timely",
+      "full": "With over two years of working development of my organization, Whizcamp and their team of software developers have proven to be a star for my development needs. They have worked around the clock to deliver timely results."
+    }
+  ]
+  </script>
+        </div>
+        <div id="contact"></div>
+        <div class="group-188">
+          <div class="group-189">
+            <div class="frame-55">
+              <div class="group-190">
+                <div class="ellipse-7"></div>
+                <div class="ellipse-8"></div>
+              </div>
+              <div class="group-102">
+                <div class="ellipse-9"></div>
+                <div class="ellipse-8"></div>
+              </div>
+              <!-- <img loading="lazy" decoding="async"
+                class="rectangle-30"
+                src="../assets/images/rectangle-2.webp"
+              /> -->
+            </div>
+          </div>
+          <div class="group-191">
+            <div class="group-192">
+              <div class="group-193">
+                <p class="start-your-AI">
+                  Start your AI-powered product in 30 days.<br />Tell us what
+                  you&#39;re building.
+                </p>
+                <div class="group-194">
+                  <p class="first-name">
+                    <span class="text-wrapper-18">First Name </span>
+                    <span class="text-wrapper-116">*</span>
+                  </p>
+                  <div class="group-195">
+                    <div class="rectangle-31"></div>
+                    <div class="text-wrapper-117">Enter your First Name</div>
+                  </div>
+                </div>
+                <div class="group-196">
+                  <p class="your-concern">
+                    <span class="text-wrapper-18">Your Concern </span>
+                    <span class="text-wrapper-116">*</span>
+                  </p>
+                  <div class="group-195">
+                    <div class="rectangle-32"></div>
+                    <p class="text-wrapper-118">
+                      Briefly describe your project or requirements
+                    </p>
+                  </div>
+                </div>
+                <div class="group-197">
+                  <p class="text-wrapper-119">Please attach file (PDF, DOC)</p>
+                  <div class="group-198">
+                    <div class="frame-56">
+                      <div class="text-wrapper-120">Choose File</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group-199">
+                  <p class="phone-number">
+                    <span class="text-wrapper-18">Phone Number </span>
+                    <span class="text-wrapper-116">*</span>
+                  </p>
+                  <div class="group-200">
+                    <div class="frame-57">
+                      <div class="group-201">
+                        <img class="frame-58" src="../assets/icons/frame-10.svg" alt="" />
+                        <div class="frame-59">
+                          <div class="frame-60">
+                            <div class="text-wrapper-121">US</div>
+                            <img class="frame-61" src="../assets/icons/frame-14.svg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                      <img class="vector-15" src="../assets/icons/vector-1.svg" alt="" />
+                      <div class="frame-62">
+                        <div class="text-wrapper-121">+1</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group-202">
+                  <p class="service">
+                    <span class="text-wrapper-18">Service </span>
+                    <span class="text-wrapper-116">*</span>
+                  </p>
+                  <div class="group-195">
+                    <div class="rectangle-31"></div>
+                    <img class="frame-63" src="../assets/icons/frame-14.svg" alt="" />
+                    <p class="text-wrapper-117">How we can help you?</p>
+                  </div>
+                </div>
+                <div class="group-203">
+                  <div class="text-wrapper-122">Budget</div>
+                  <div class="group-195">
+                    <div class="rectangle-31"></div>
+                    <img class="frame-63" src="../assets/icons/frame-14.svg" alt="" />
+                    <div class="text-wrapper-117">Choose a budget</div>
+                  </div>
+                </div>
+                <div class="group-204">
+                  <p class="email-address">
+                    <span class="text-wrapper-18">Email Address </span>
+                    <span class="text-wrapper-116">*</span>
+                  </p>
+                  <div class="group-195">
+                    <div class="rectangle-31"></div>
+                    <div class="text-wrapper-117">Enter your Email Address</div>
+                  </div>
+                </div>
+                <div class="group-205">
+                  <div class="text-wrapper-123">Company Name</div>
+                  <div class="group-195">
+                    <div class="rectangle-31"></div>
+                    <div class="text-wrapper-117">Enter your Company Name</div>
+                  </div>
+                </div>
+                <img class="screenshot" src="../assets/images/google-recaptcha-protected-badge.png" alt="Protected by reCAPTCHA" />
+                <div class="group-206">
+                  <div class="group-207">
+                    <div class="rectangle-33"></div>
+                    <div class="text-wrapper-124">Submit</div>
+                  </div>
+                  <img class="group-208" src="../assets/images/submit-form-button-arrow-icon-dark.png" alt="" />
+                </div>
+                <p class="note-your-idea-is">
+                  <span class="text-wrapper-113">Note:</span>
+                  <span class="text-wrapper-18">
+                    Your idea is 100% protected by our non disclosure
+                    agreement.</span>
+                </p>
+              </div>
+            </div>
+            <div class="group-209">
+              <div class="frame-64">
+                <div class="group-210">
+                  <p class="let-s-dive-into-your">
+                    <span class="text-wrapper-59">Let&#39;s Dive<br />into
+                    </span>
+                    <span class="text-wrapper-99">Your Needs.</span>
+                  </p>
+                  <p class="we-believe-the-best">
+                    We believe the best solutions are born from understanding
+                    your unique<br />needs. Let’s connect for a personalized
+                    consultation! .
+                  </p>
+                </div>
+                <img class="vector-16" src="../assets/icons/vector-7.svg" alt="" />
+                <div class="group-211">
+                  <img loading="lazy" decoding="async" class="ellipse-16" src="../assets/images/whizcamp-co-founder-cto-portrait.webp" alt="Jagdip Singh, Co-Founder and CTO of Whizcamp" />
+                  <div class="group-212">
+                    <div class="text-wrapper-125">Jagdip Singh</div>
+                    <div class="co-founder-CTO">Co-Founder &amp; CTO</div>
+                  </div>
+                </div>
+                <img class="vector-16" src="../assets/icons/vector-7.svg" alt="" />
+                <div class="group-213">
+                  <div class="group-214">
+                    <div class="text-wrapper-126">Email</div>
+                    <div class="text-wrapper-127">Info@whizcamp.tech</div>
+                  </div>
+                  <div class="group-215">
+                    <div class="text-wrapper-128">Phone Number</div>
+                    <div class="text-wrapper-129">+1(737) 371-9006</div>
+                  </div>
+                </div>
+              </div>
+              <div class="group-216">
+                <div class="group-133">
+                  <div class="rectangle-25"></div>
+                  <div class="text-wrapper-101">Book a Meeting</div>
+                </div>
+                <img class="group-134" src="../assets/images/book-a-meeting-button-arrow-icon-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="homepage-footer">
+          <div class="frame-65">
+            <div class="frame-66">
+              <div class="ellipse-4"></div>
+            </div>
+            <div class="frame-67">
+              <div class="ellipse-5"></div>
+            </div>
+          </div>
+          <div class="whizcamp">WHIZCAMP</div>
+          <p class="we-custom-develop">
+            We Custom-develop Solutions<br />that Help You Unlock A Sea Of<br />potential
+            Opportunities.
+          </p>
+          <img class="vector-17" src="../assets/icons/vector-7.svg" alt="" />
+          <div class="group-218">
+            <img class="vector-18" src="../assets/icons/vector-7.svg" alt="" />
+            <div class="group-219">
+              <div class="group-220">
+                <img class="whizcamp-logo-footer" src="../assets/images/whizcamp-llc-logo-footer.png" alt="Whizcamp LLC logo" />
+
+              </div>
+              <p class="text-wrapper-134">
+                We empower businesses to scale digitally through innovation,
+                strategy, and smart development. Driven by passion, powered by
+                technology: we turn ideas into impact.
+              </p>
+            </div>
+            <div class="group-223">
+              <div class="group-224">
+                <div class="text-wrapper-135">Services</div>
+                <div class="frame-68">
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      AI &amp; Machine Learning
+                    </div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Cyber security</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Mobile App Development</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Website Development</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">DevOps &amp; Clouds</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Digital Marketing</div>
+                  </div>
+                  <div class="frame-70">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">IT Staff Augmentation</div>
+                  </div>
+                </div>
+              </div>
+              <div class="group-225">
+                <div class="text-wrapper-137">Industries</div>
+                <div class="frame-71">
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      Healthcare &amp; Wellness
+                    </div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Travel Hospitality</div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      Logistics &amp; Transportation
+                    </div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Retail &amp; E-Commerce</div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">Food Delivery Solutions</div>
+                  </div>
+                  <div class="frame-69">
+                    <div class="ellipse-17"></div>
+                    <div class="text-wrapper-136">
+                      Education &amp; E-Learning
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-72">
+                <div class="text-wrapper-138">Our Location</div>
+                <div class="frame-73">
+                  <div class="group-226">
+                    <p class="text-wrapper-139">
+                      1595, 701 Tillery Street Unit 12, Austin, TX, Travis, US,
+                      78702
+                    </p>
+                    <img class="group-227" src="../assets/images/contact-location-pin-icon.png" alt="Location pin icon" />
+                  </div>
+                  <div class="group-228">
+                    <div class="text-wrapper-140">info@whizcamp.us</div>
+                    <img class="group-227" src="../assets/images/contact-email-icon.png" alt="Email icon" />
+                  </div>
+                  <div class="group-228">
+                    <div class="text-wrapper-140">+1(737) 371-9006</div>
+                    <img class="group-227" src="../assets/images/contact-phone-icon.png" alt="Phone icon" />
+                  </div>
+                  <div class="group-229">
+                    <p class="text-wrapper-140">
+                      10:00 AM-07:00 PM PST<br />Monday - Friday
+                    </p>
+                    <img class="group-227" src="../assets/images/contact-business-hours-clock-icon.png" alt="Business hours clock icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-230">
+              <p class="text-wrapper-141">
+                Copyright ©2026 Whizcamp LLC. All right reserved
+              </p>
+              <div class="frame-74">
+                <div class="text-wrapper-142">Privacy Policy</div>
+                <div class="ellipse-18"></div>
+                <div class="text-wrapper-142">Term &amp; Conditions</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-pill--data-intelligence">
+            <div class="text-wrapper-143">Data Intelligence</div>
+          </div>
+          <div class="footer-pill--growth-strategy">
+            <div class="text-wrapper-144">Growth Strategy</div>
+          </div>
+          <div class="footer-pill--experience-design">
+            <div class="text-wrapper-144">Experience Design</div>
+          </div>
+          <div class="footer-pill--ai-engineering">
+            <div class="text-wrapper-143">AI Engineering</div>
+          </div>
+          <div class="footer-pill--cloud-architecture">
+            <div class="text-wrapper-143">Cloud Architecture</div>
+          </div>
+          <div class="footer-pill--digital-transformation">
+            <div class="text-wrapper-144">Digital Transformation</div>
+          </div>
+          <div class="footer-pill--product-strategy">
+            <div class="text-wrapper-144">Product Strategy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/mega-menu.js" defer></script>
+  <script src="../assets/js/pages/services.js" defer></script>
+</body>
 </html>

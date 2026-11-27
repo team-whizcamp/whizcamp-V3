@@ -4,7 +4,7 @@
 @media(max-width:1024px){:root{--gutter:32px}}
 @media(max-width:767px){:root{--gutter:20px}}
 
-.layout-container-lg{max-width:100%;margin:0 auto;padding:0 var(--gutter);width:100%;position:relative;z-index:2;}
+.layout-container-lg{max-width:100%;margin:0 auto;padding:0 var(--gutter);width:100%;position:relative;z-index:2}
 
 /* ---------- shell: flow layout, no fixed page height ---------- */
 html body .responsive-stage,
@@ -28,8 +28,8 @@ html body .responsive-stage,
 .homepage.homepage .group-4{left:auto!important;right:var(--gutter)}
 .homepage.homepage .group-2{left:auto!important;right:calc(var(--gutter) + 278px)}
 .homepage.homepage .group-5{left:auto!important;right:var(--gutter)}
-.homepage.homepage .group-25{left:var(--gutter)!important;width:calc(100% - 2*var(--gutter))!important ;    padding: 0px 19px;}
-.homepage.homepage .group-26{width:auto;margin:16px 0px 0}
+.homepage.homepage .group-25{left:var(--gutter)!important;width:calc(100% - 2*var(--gutter))!important}
+.homepage.homepage .group-26{width:auto;margin:16px 24px 0}
 .homepage.homepage .frame-10{left:50%!important;transform:translateX(-50%)}
 .homepage.homepage .group-28{left:auto;right:0}
 .homepage.homepage .group-27{left:0}
@@ -1208,7 +1208,7 @@ html body .homepage.homepage .testimonials-section.wc-testimonials{
   max-width:none !important;
   margin:0 !important;
   padding-top:100px !important;
-  padding-bottom:100px !important;
+  padding-bottom:2px !important;
   padding-left:var(--gutter,120px) !important;
   padding-right:var(--gutter,120px) !important;
   gap:40px;
@@ -2443,3 +2443,22 @@ html body .homepage.homepage .brands-slider .brand-slide img{
 .industry-list__item {
   cursor: pointer;
 }
+
+/* ==========================================================================
+   SITE-WIDE ALIGNMENT — every content block lines up with the header edges.
+   Works together with the alignment block at the end of main.js.
+   ========================================================================== */
+/* layout.css narrows the testimonials gutter on screens >= 1600px, which pushes that
+   section outside the header; use the shared gutter instead */
+@media (min-width: 1600px) {
+  html body .homepage.homepage .testimonials-section.wc-testimonials {
+    padding-left: var(--gutter, 120px) !important;
+    padding-right: var(--gutter, 120px) !important;
+  }
+}
+
+/* contact block: form flush with the left edge, "Let's Dive" column flush with the right
+   (layout.css centers the two columns on wide screens) */
+.homepage.homepage .group-188 .group-191 { justify-content: space-between; }
+.homepage.homepage .group-188 .group-192 { justify-self: start; }
+.homepage.homepage .group-188 .group-209 { justify-self: end; }

@@ -773,7 +773,7 @@ width: 29px;
   pointer-events: none;
   opacity: .09;
   mix-blend-mode: overlay;
-  background-image: url("../images/rectangle-2.webp");
+  background-image: url("../../images/rectangle-2.webp");
   background-size: 220px;
 }
 
